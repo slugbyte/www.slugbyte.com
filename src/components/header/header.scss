@@ -24,17 +24,57 @@
       display: block;
       padding: 0 ;
       margin: 0;
-      margin-top: 5px;
       height: 50px;
+      margin-top: 5px;
+      transition: 500ms;
+      border-radius: 50%;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
 
     .site-title {
       display: block;
       float: left;
-      font-size: 2em;
-      font-family: monospace;
-      margin-top: .5em;
+      margin-top: 12px;
       margin-left: .5em;
+
+      span, a {
+        font-size: 2rem;
+        font-family: monospace;
+        transition: 100ms;
+        text-decoration: none;
+        cursor: default;
+      }
+
+      &:hover {
+        span:nth-child(3n+1){
+          transform: rotate(-90deg) translate(-10px, 10px);
+          transition: 170ms;
+        }
+        span:nth-child(4n - 2){
+          transform: rotate(180deg) translate(10px, -10px);
+;
+          transition: 190ms;
+          color: grey;
+        }
+        span:nth-child(7n - 2){
+          transform: rotate(-100deg);
+          transition: 300ms;
+        }
+        span:nth-child(5n-2){
+          transform: rotate(15deg) translate(-1px, -1px);
+          transition: 500ms;
+          color: darkgrey;
+        }
+        span:nth-child(5n-4){
+          transform: rotate(155deg) translate(10px, -10px);
+;
+          transition: 120ms;
+          color: darkgrey;
+        }
+      }
     }
   }
 
@@ -47,6 +87,7 @@
     ul.hide {
       z-index: -100;
       top: -100px;
+      transform: translateX(-10px);
     }
 
     ul {
@@ -63,12 +104,15 @@
       }
       li:nth-child(2) a {
         background: #f4ff00 *.8;
+        transform: translateX(-10px);
       }
       li:nth-child(3) a {
         background: #f4ff00 *.7;
+        transform: translateX(-20px);
       }
       li:nth-child(4) a {
         background: #f4ff00 *.6;
+        transform: translateX(-10px);
       }
       li:nth-child(5) a {
         background: #f4ff00 *.5;
@@ -80,17 +124,11 @@
         text-decoration: none;
         transition: 200ms;
 
-        &:hover {
+        &:hover,&:focus {
           background: #f4ff00 *.4;
           transform: translateX(-12px);
-          //border-left: 4px solid black;
-          border-radius: 12px  0px 0px  12px;
         }
-
       }
-
-
-
     }
 
     .hamburger {
@@ -99,11 +137,19 @@
       width: 60px;
       height: 60px;
       padding: 12px;
+      background: none;
+
       .button {
         width: 100%;
         height: 100%;
         transition: 200ms;
         padding-top: 3.5px;
+        background: none;
+        &:focus {
+          div {
+            background: grey;
+          }
+        }
         div {
           display: block;
           float: left;

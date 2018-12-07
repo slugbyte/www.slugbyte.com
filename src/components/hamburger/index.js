@@ -19,19 +19,19 @@ class Hamburger extends React.Component {
   render() {
     return (
       <nav className='site-nav'>
-        <div onClick={this.toggleHamburger} className={'hamburger' + (this.state.open ? ' selected' : '')} >
-          <div className='button'>
+        <div className={'hamburger' + (this.state.open ? ' selected' : '')} >
+          <button aria-label='toggle navigation menu button' onClick={this.toggleHamburger} tabIndex='0' className='button'>
              <div />
              <div />
              <div />
-          </div>
+          </button>
         </div>
         <ul className={this.state.open ? '' : 'hide'}>
-          <li><Link to='/page-2'>art_</Link> </li>
-          <li><Link to='/page-2'>blog_</Link> </li>
-          <li><Link to='/page-2'>home_</Link> </li>
-          <li><Link to='/page-2'>contact_</Link> </li>
-          <li><Link to='/page-2'>projects_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>art_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>blog_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>home_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>contact_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>projects_</Link> </li>
         </ul>
       </nav>
     )
