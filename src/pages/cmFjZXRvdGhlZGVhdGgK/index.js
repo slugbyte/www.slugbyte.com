@@ -15,16 +15,18 @@ import {
   drawGameStartSequence,
 } from './ZWdnCg==.js'
 
+let defaultState = {
+  computerOn: false,
+  showMenu: false,
+  showMenuToggle: false,
+  showGameMenu: false,
+  showBackButton: false,
+}
+
 class Egg extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      computerOn: false,
-      showMenu: false,
-      showMenuToggle: false,
-      showGameMenu: false,
-      showBackButton: false,
-    }
+    this.state = {...defaultState}
   }
 
   componentDidUpdate(){
@@ -45,10 +47,7 @@ class Egg extends React.Component {
       })
     } else {
       stopEverything()
-      this.setState(state => ({ 
-        computerOn: !state.computerOn,
-        showMenuToggle: false,
-      }))
+      this.setState({...defaultState})
     }
   }
 
@@ -75,6 +74,8 @@ class Egg extends React.Component {
   }
 
   handleQuitClick = () => {
+    this.setState({showGameMenu: false, showBackButton: false})
+    drawBlackOutScreen()
   }
 
   handlePlayClick = () => {
