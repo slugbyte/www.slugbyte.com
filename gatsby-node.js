@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+// See: https://www.gatsbyjs.org/docs/node-apis/
 
-// You can delete this file if you're not using it
+require('dotenv').load()
+
+exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      plugins.define({
+        __PRODUCTION__: process.env.NODE_ENV === 'production'
+      }),
+    ],
+  })
+}

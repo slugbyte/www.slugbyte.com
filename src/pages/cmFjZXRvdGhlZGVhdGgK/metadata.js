@@ -1,0 +1,28 @@
+export default {
+  width: 512,
+  height: 256,
+  frameRate: 24,
+  images: {
+    spriteSheet: require('../../images/egg.png'),
+    computerStartScreen: require('../../images/egg-computer-startup-screen-icon.png'),
+    raceToTheDeathStartScreen: require('../../images/egg-race-to-the-death-start-screen.png'),
+  },
+  spriteNames: {
+    'grass': 1, 
+    'yellowStripe': 2,
+    'sand': 3,
+    'concrete': 4,
+    'roadLine': 5,
+    'mistery': 6,
+    'checker': 7 ,
+    'peachStrip': 8,
+    'whole': 9,
+    'banana': 10,
+    'gas': 11,
+    'swirl': 12,
+    'pinkCar': 13,
+    'blueCar': 14,
+    'tealCar': 15,
+    'redCar': 16,
+  },
+}

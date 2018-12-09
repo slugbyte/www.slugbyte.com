@@ -1,0 +1,194 @@
+$canvas_width: 512px;
+$canvas_height: 256px;
+$computer_width: 640px;
+$computer_height: 512px;
+%game-button {
+  width: 75px;
+  position: absolute;
+  background: none ;
+  border-top: 4px solid yellow;
+  border-left: 4px solid yellow;
+  border-bottom: 4px solid orange;
+  border-right: 4px solid orange;
+  padding: 8px;
+  color: #000;
+  background: rgba(255, 255,255, 0.4);
+  &:hover {
+    background: none;
+  }
+  &:active {
+    background: rgba(0,0,0, 0.3);
+  }
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+}
+
+.egg {
+  width: 100%;
+  height: 100%;
+
+  .hide {
+    display: none;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .computer {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 32px;
+    width: $computer_width;
+    height: $computer_height;
+    padding: 32px;
+    background: url('../../images/egg-computer-icon.png');
+    border-radius: 25px 25px 0px 0px;
+
+    .power-switch {
+      input {
+        display: none;
+      }
+
+      label {
+        box-shadow: 4px 4px #000;
+        position: absolute;
+        bottom: 50px;
+        right: 21px;
+        width: 61px;
+        height: 81px;
+        z-index: 101;
+      }
+
+      div {
+        border: none;
+        position: absolute;
+        bottom: 38px;
+        right: 15px;
+        width: 119px;
+        height: 118px;
+        background: url('../../images/egg-computer-power-off-icon.png');
+        z-index: 100;
+      }
+
+    }
+
+    .power-switch label:hover~ div {
+      background: url('../../images/egg-computer-power-hover-icon.png');
+    }
+    .power-switch input:checked ~ div {
+      background: url('../../images/egg-computer-power-on-icon.png');
+    }
+  }
+
+  .screen {
+    width: 512px;
+    height: 294px;
+    z-index: 1000;
+    margin: 0 auto;
+    overflow: hidden;
+    background: black;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: inset 0px 0px 20px #000;
+
+    canvas {
+      float: left;
+      margin: 0 auto;
+      background: #000;
+      width: $canvas_width;
+      height: $canvas_height;
+    }
+
+
+    .game-menu {
+      button {
+        @extend %game-button;
+      }
+
+      .play-btn {
+        top: 100px;
+        left: 275px;
+      }
+
+      .help-btn {
+        top: 170px;
+        left: 175px;
+      }
+
+      .quit-btn {
+        top: 170px;
+        left: 375px;
+      }
+    } 
+
+    .back-btn {
+      @extend %game-button;
+      top: 220px;
+      left: 90px;
+    }
+
+    nav {
+      float: left;
+      margin: 0 auto;
+      height: 39px;
+      width: $canvas_width;
+      border-top: 2px solid #fff;
+      background: #aaa;
+       button {
+         width: 32px;
+         height: 34px;
+         background: url('../../images/egg-menu-icon.png');
+         background-repeat: no-repeat;
+         background-size: 32px 32px;
+         margin-left: 4px;
+         margin-top: 2px;
+
+         &:hover {
+           background: url('../../images/egg-menu-hover-icon.png');
+           background-size: 32px 32px;
+         }
+
+         &:active {
+           background: url('../../images/egg-menu-click-icon.png');
+           background-size: 32px 32px;
+         }
+       } 
+
+
+      ul {
+        position: absolute;
+        margin: 0;
+        padding: 4px;
+        padding-top: 0px;
+        width: 128px;
+        background: #aaa;
+        top: 236px;
+        left: 64px;
+
+        li {
+          padding: 2px;
+          margin-top: 4px;
+          background: #888;
+          &:hover {
+            background: #666;
+          }
+
+          &:active{
+            background: #444;
+          }
+        }
+
+        * {
+          text-align: center;
+          text-decoration: none;
+          font-family: monospace;
+        }
+      }
+    }
+  }
+}
