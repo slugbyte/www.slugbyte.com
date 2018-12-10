@@ -7,6 +7,7 @@ import metadata from './metadata.js'
 
 import { 
   setupEngine, 
+  startGameLoop,
   stopEverything,
   drawBootSequence, 
   drawBlackOutScreen,
@@ -27,6 +28,7 @@ class Egg extends React.Component {
   constructor(props) {
     super(props)
     this.state = {...defaultState}
+    console.log('state', this.state)
   }
 
   componentDidUpdate(){
@@ -79,6 +81,8 @@ class Egg extends React.Component {
   }
 
   handlePlayClick = () => {
+    this.setState({showGameMenu: false, showBackButton: false})
+    startGameLoop()
   }
 
   componentDidMount(){
