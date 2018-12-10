@@ -1,3 +1,0 @@
-[submodule "submodules/data-structures"]
-	path = submodules/data-structures
-	url = git@github.com:slugbyte/data-structures.git
