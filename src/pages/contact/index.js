@@ -4,13 +4,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
-
-const SlugIcon = ({name, width='20px', height=''}) => {
-  console.log('naname', name)
-   return (
-    <img alt={name} style={{width, height}} className='slug-icon' src={require('../../images/icon/' + name)} /> 
-   )
-}
+import SlugIcon from '../../components/slug-icon'
 
 const SecondPage = () => (
   <Layout>
@@ -19,25 +13,25 @@ const SecondPage = () => (
         <h1> Hi Y'all, I'm Duncan Marsh. Feel free to drop me a message any time.</h1>
         <div className='github'>
            <a alt='github' href="https://github.com/slugbyte">
-             <SlugIcon name='github.svg' />
+             <SlugIcon alt='github' name='github.svg' />
              slugbyte
            </a>
         </div>
         <div className='twitter'>
            <a href="https://twitter.com/slugbyte">
-              <SlugIcon name='twitter.svg' />
+              <SlugIcon alt='twitter' name='twitter.svg' />
               @slugbyte
            </a>
         </div>
         <div className='instagram'> 
           <a alt='instagram' href="https://www.instagram.com/dunkdunkdunkdunkdunk/">
-            <SlugIcon name='instagram.svg' />
+            <SlugIcon alt='instagram' name='instagram.svg' />
             @dunkdunkdunkdunkdunk
           </a>
         </div>
         <div className='youtube'> 
           <a alt='youtube' href="https://www.youtube.com/channel/UC3xazNh2a08gUACTtwgROwA">
-            <SlugIcon name='youtube.svg' />
+            <SlugIcon alt='youtube' name='youtube.svg' />
             Happy Hackin with Slugbyte
           </a>
         </div>
