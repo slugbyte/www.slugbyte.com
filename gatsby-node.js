@@ -1,6 +1,13 @@
 // See: https://www.gatsbyjs.org/docs/node-apis/
-
 require('dotenv').load()
+const sourceBlog = require('./lib/source-blog.js')
+
+exports.sourceNodes = (props) => {
+  return Promise.all([
+    sourceBlog('blog', 'BlogPost',  props),
+    sourceBlog('project', 'ProjectPost',  props),
+  ])
+}
 
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, }) => {
   actions.setWebpackConfig({

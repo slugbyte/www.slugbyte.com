@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/slugbyte/toy",
+  "title": "Toy",
+  "description": "Assembler and VM that runs in browsers, as a learning tool",
+  "keywords": ["virtual maschine", "assembler", "vm", "javascript"],
+  "imageUrl": "",
+  "published": true,
+  "timestamp": "2019-01-02T16:50:45.966Z"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/slugbyte/config",
+  "title": "Dot",
+  "description": "Dotfiles and a homegrown tool that helps me manage my system configurations",
+  "keywords": [ "bash", "linux", "osx", "unix", "sysadmin", "configuration", "dotfiles" ],
+  "imageUrl": "",
+  "published": true,
+  "timestamp": "2019-01-02T16:50:45.966Z"
+}

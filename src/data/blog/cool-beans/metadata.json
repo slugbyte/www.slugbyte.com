@@ -1,6 +1,6 @@
 {
-    "url": "day-6-with-the-space-heater",
-      "title": "/blog/Day 6 with the space heater",
+    "url": "blog/day-6-with-the-space-heater",
+      "title": "cool beans",
       "description": "Life update, and a run down on JS object instantion benchmarks.",
       "keywords": [
             "Javascript",
@@ -9,6 +9,6 @@
             "speed test"
           ],
       "imageUrl": "default",
-      "published": true,
+      "published": false,
       "timestamp": "2018-12-20T23:57:04.254Z"
 }
