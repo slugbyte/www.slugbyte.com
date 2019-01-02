@@ -19,9 +19,19 @@ head {
 html, body {
   width: 100%;
   height: 100%;
+  background: #fff !important;
 }
 
 span  {
   display: inline-block;
 }
 
+pre {
+  width: 400px;
+  font-family: monospace; 
+  white-space: pre;
+}
+
+strong {
+  display: inline;
+}
