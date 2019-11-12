@@ -1,0 +1,61 @@
+@import '../../style/_var.scss';
+
+.art-page {
+  .art-container {
+    width: 100%;
+    .art {
+      width: 100%;
+      height: 100vw;
+      background: red;
+      margin-top: $pad;
+    }
+  }
+}
+
+@media screen and (min-width: $break_tablet){
+  .art-page {
+    .art-container {
+      .art {
+        width: calc(50% - .25em); // MAGIC
+        height: calc(50vw - .25em); // MAGIC
+        float: left;
+      }
+      .art:nth-child(even){
+        margin-left: $pad;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $break_desktop){
+  .art-page {
+    .art-container {
+      //$ticky_pad: 1em / 3;
+      .art {
+        width: calc(980px / 3 - (1em / 3) ); // MAGIC
+        height: calc(980px / 3); // MAGIC
+        float: left;
+        margin: 0;
+        margin-top: $pad;
+        &:nth-child(even) {
+          margin: 0;
+          margin-top: $pad;
+        }
+
+        &:nth-child(3n+2){
+          background: yellow;
+          margin-left: $pad;
+          //margin-left: .75em;
+        }
+
+        &:nth-child(3n+3){
+          background: blue;
+          margin-left: $pad;
+          //margin-left: .75em;
+        }
+      }
+
+
+    }
+  }
+}

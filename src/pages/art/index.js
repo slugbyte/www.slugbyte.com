@@ -1,3 +1,5 @@
+import './_art.scss'
+
 import React from 'react'
 import { Link } from 'gatsby'
 
@@ -6,9 +8,27 @@ import Image from '../../components/image'
 
 const IndexPage = () => (
   <Layout >
-    <div style={{padding: '100px'}}>
-      <h1>Art</h1>
-    </div>
+    <div className='art-page'>
+      <div className='art-container'>
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+        <div className='art'></div> 
+      </div>
+  </div>
   </Layout>
 )
 
