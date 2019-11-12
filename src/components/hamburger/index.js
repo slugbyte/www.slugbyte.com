@@ -27,11 +27,12 @@ class Hamburger extends React.Component {
           </button>
         </div>
         <ul className={this.state.open ? '' : 'hide'}>
-          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>art_</Link> </li>
-          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>blog_</Link> </li>
-          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>home_</Link> </li>
-          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>contact_</Link> </li>
-          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/page-2'>projects_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/art'>art_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/blog'>blog_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/audio'>audio_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/contact'>contact_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/project'>project_</Link> </li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/'>/_</Link> </li>
         </ul>
       </nav>
     )

@@ -1,5 +1,4 @@
 // See: https://www.gatsbyjs.org/docs/node-apis/
-
 require('dotenv').load()
 
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, }) => {

@@ -86,7 +86,7 @@
 
     ul.hide {
       z-index: -100;
-      top: -100px;
+      top: -150px;
       transform: translateX(-10px);
     }
 
@@ -116,6 +116,11 @@
       }
       li:nth-child(5) a {
         background: #f4ff00 *.5;
+      }
+      
+      li:nth-child(6) a {
+        background: #f4ff00 *.4;
+        transform: translateX(-10px);
       }
       li a {
         text-align: right;

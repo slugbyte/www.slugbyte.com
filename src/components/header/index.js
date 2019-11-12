@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
     <main>
       <div className='site-logo'>
         <img className='site-logo-image' src={require('../../images/slugbyte-icon.png')} alt='slugbyte.com logo' />
-        <p className='site-title'><span>s</span><span>l</span><span>u</span><span>g</span><span>b</span><span>y</span><span>t</span><span>e</span><span>.</span><span>c</span><span>o</span><span><Link tabIndex={-1} to='/cmFjZXRvdGhlZGVhdGgK'>m</Link></span></p>
+        <p className='site-title'><Link style={{display: 'inline'}} tabIndex={-1} to='/'><span>s</span><span>l</span><span>u</span><span>g</span><span>b</span><span>y</span><span>t</span><span>e</span><span>.</span><span>c</span><span>o</span></Link><span><Link tabIndex={-1} to='/cmFjZXRvdGhlZGVhdGgK'>m</Link></span></p>
       </div>
       <Hamburger />
     </main>
