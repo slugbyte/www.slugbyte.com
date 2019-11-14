@@ -1,0 +1,60 @@
+@import '../../style/_var.scss';
+
+.audio-player {
+
+  .title, .time {
+    display: inline;
+  }
+  .play-icon, .pause-icon, .forward-icon, .back-icon, .reset-icon {
+    float: left;
+    margin-top: .5em;
+    margin-right: .5em;
+    width: 32px;
+    height: 32px;
+  }
+
+  .play-icon {
+    fill: green;
+    &:hover {
+      fill: green * 0.7;
+    }
+    &:active {
+      fill: green * 0.4;
+    }
+  }
+  .pause-icon { fill: skyblue * 0.9;
+    &:hover {
+      fill: skyblue * 0.7;
+    }
+    &:active {
+      fill: skyblue* 0.4;
+    }
+  }
+  .forward-icon {
+    fill: salmon;
+    &:hover {
+      fill: salmon * 0.7;
+    }
+    &:active {
+      fill: salmon * 0.4;
+    }
+  }
+  .back-icon {
+    fill: salmon;
+    &:hover {
+      fill: salmon * 0.7;
+    }
+    &:active {
+      fill: salmon * 0.4;
+    }
+  }
+  .reset-icon {
+    fill: red;
+    &:hover {
+      fill: red * 0.7;
+    }
+    &:active {
+      fill: red * 0.4;
+    }
+  }
+}

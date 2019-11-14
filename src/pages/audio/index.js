@@ -1,15 +1,38 @@
+//import './_art.scss'
+
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from "gatsby"
 
 import Layout from '../../components/layout'
-import Image from '../../components/image'
+import AudioPlayer from '../../components/audio-player'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+  console.log('data', data)
+  let tuneTest = data.allFile.edges[0].node
+  console.log({tuneTest})
+  return (
   <Layout >
-    <div style={{padding: '100px'}}>
-      <h1>Audio</h1>
+    <div className='audio-page'>
+      <div className='audio-container'> </div>
+      <AudioPlayer audioURI={tuneTest.publicURL} fileName={tuneTest.base} /> 
     </div>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
+
+export const query = graphql`
+  query TuneQuery {
+    allFile(filter: { sourceInstanceName: { eq: "tune" } }) {
+        edges {
+          node {
+            publicURL
+            extension
+            base
+          }
+        }
+      }    
+  }
+
+`

@@ -1,0 +1,90 @@
+@import '../../style/_var.scss';
+
+.blog-page {
+  .blog-container {
+    width: 100%;
+    .blog-post {
+      margin-top: $pad;
+      height: 100px;
+      h2 {
+        height: 3em;
+        background: $dye_black;
+      }
+      img {
+        width: 100%;
+        height: calc(100% - 3em);
+        border: none;
+        outline: none;
+        background: $dye_light;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $break_tablet){
+  .blog-page {
+    .blog-container {
+      width: 100%;
+
+      .blog-post:nth-child(even) {
+        img {
+          background: $dye_medium !important;
+          float: left;
+          margin-left: $pad;
+        }
+        
+        h2, p {
+          float: right;
+          margin: 0;
+          background: $dye_lightish;
+          margin-right: $pad;
+        }
+
+        p {
+          margin-top: $pad;
+        }
+      }
+
+      .blog-post {
+        width: 100%;
+        height: 250px;
+        margin-top: $pad; 
+
+        h2, p {
+          margin-left: $pad;
+        }
+
+        h2 {
+          float: left;
+          width: 60%;
+          height: 3em;
+          background: $dye_black;
+        }
+
+        img {
+          float: right;
+          margin-right: $pad;
+          height: calc(100% - 1em); // MAGIC
+          background: $dye_lightish;
+          width: calc(40% - 1.5em);
+          border: none;
+        }
+
+        p {
+          top: 4em;
+          float: left;
+          margin-top: $pad;
+          width: 60%;
+          height: calc(250px - 4.5em);
+          background: $dye_dark;
+        }
+      }
+
+    }
+
+  }
+}

@@ -1,12 +1,48 @@
 @import '../style/_var.scss';
 
+// TODO make wide screen look lit 
+
 .landing {
   margin-top: $pad;
   .bio {
-    width: 100%;
+    position: relative;
+    //width: 200%;
+    //margin-left: -50%;
     height: 500px;
     background: $dye_lightish;
-  }
+    background: url('../images/colors.png' ) center ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+      display: inline-block;
+      color: $dye_light;
+      background: $dye_black;
+      padding: 2em;
+      font-size: 300%;
+      min-width: 500px;
+      width: 70%;
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+
+    button {
+      position: absolute;
+      padding: 0.25em;
+      bottom: 3em;
+      right: $pad;
+      background: $dye_light;
+      color: $dye_black;
+      font-size: 2em;
+      border-bottom: $pad solid white;
+      transform: skew(4deg) rotate(5deg);
+
+      &:hover { background: $dye_lightish; }
+      &:active{ background: $dye_darkish; }
+    }
+}
 
   .feature-container {
     margin-top: $pad;
@@ -26,11 +62,43 @@
     }
   }
 
-  .tune {
+  .head{
     width: 100%;
     height: 250px;
     background: $dye-light * .5;
     margin-top: $pad;
+    background: url('../images/streach-head.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .tune {
+    position: relative;
+    padding-left: 3em;
+    padding-right: 3em;
+    //width: 200%;
+    //margin-left: -50%;
+    height: 250px;
+    background: $dye-light * .5;
+    //transform: translateX(-50%);
+    margin-top: $pad;
+    background: url('../images/chain.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;;
+    //background-repeat: no-repeat;
+
+    .player-container {
+      position: absolute;
+      background: $dye_white;   
+      border: 2px solid $dye_black;
+      padding: $pad;
+      width: calc(100% - 6em); //MAGIC
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    //background-size: cover;
   }
 
   .art-container {
@@ -64,6 +132,13 @@
 
 @media screen and (min-width: $break_tablet){
   .landing {
+    .bio {
+      button {
+        bottom: 1em;
+        right: 1em;
+
+      }
+    }
     .feature-container {
       width: 100%;
       height: 250px;

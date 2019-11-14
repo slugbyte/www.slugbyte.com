@@ -1,15 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'slugbyte.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    //{
+      //resolve: `gatsby-source-filesystem`,
+      //options: {
+        //name: `images`,
+        //path: `${__dirname}/src/images`,
+      //},
+    //},
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `art`,
+        path: `${__dirname}/src/images/art`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tune`,
+        path: `${__dirname}/src/asset/tune`,
       },
     },
     'gatsby-transformer-sharp',

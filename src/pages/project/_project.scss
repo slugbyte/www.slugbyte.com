@@ -1,0 +1,69 @@
+@import '../../style/_var.scss';
+
+.project-page {
+  .project-container {
+    width: 100%;
+    .project-post {
+      margin-top: $pad;
+      height: 20vw; 
+      img {
+        width: 20%;
+        height: 100%;
+        float: left;
+        border: none;
+        outline: none;
+        background: $dye_light;
+      }
+
+      h2 {
+        height: 20vw; 
+        float: right; width: calc( 100% - 20vw);
+        background: $dye_black;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $break_tablet){
+  .project-page {
+    .project-container {
+      width: 100%;
+
+      .project-post {
+        width: 100%;
+        height: 250px;
+        background: yellow;
+
+        h2 {
+          float: left;
+          width: 100%;
+          height: 3em;
+          background: $dye_black;
+        }
+
+        img {
+          float: left;
+          width: 50%;
+          height: calc(100% - 3em);
+          background: $dye_lightish;
+          border: none;
+        }
+
+        p {
+          display: inline-block;
+          float: left;
+          width: 50%;
+          height: calc(100% - 3em);
+          background: $dye_light;
+        }
+      }
+
+    }
+
+  }
+}
