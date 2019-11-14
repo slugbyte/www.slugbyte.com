@@ -1,7 +1,6 @@
 import './_audio-player.scss'
 import React from 'react'
 
-
 import offset from '../../lib/offset.js'
 import playIcon from './svg/play.svg'
 import pauseIcon from './svg/pause.svg'
@@ -12,6 +11,8 @@ import backIcon from './svg/back.svg'
 let minuteFormat = (seconds) => {
   let minutes = Math.floor(seconds / 60)
   seconds = Math.floor(seconds % 60)
+  if (seconds < 10 ) 
+    seconds = '0' + seconds
   return minutes + ':' + seconds
 }
 
@@ -37,7 +38,9 @@ class AudioPlayer extends React.Component {
     media.load()
 
     media.addEventListener('timeupdate', () => {
-      this.setState({currentProgress: media.currentTime / media.duration * 100})
+      let currentProgress = media.currentTime / media.duration * 100 
+      if (currentProgress == 100) return this.handleReset()
+      this.setState({currentProgress})
     })
 
     media.addEventListener('loadeddata', () => {
@@ -50,7 +53,13 @@ class AudioPlayer extends React.Component {
       currentProgress: 0,
       displayTracker: 'false',
       playing: false,
+      playRate: 1,
     }
+  }
+
+  handleRateChage = (e) => {
+    this.setState({playRate: e.target.value})
+    this.state.media.playbackRate = e.target.value
   }
 
   handleProgressClick = (e) => {
@@ -119,7 +128,7 @@ class AudioPlayer extends React.Component {
         //<p> {minuteFormat(Math.round(this.state.media.currentTime))} / {minuteFormat(this.state.duration)} </p>
     return (
       <div className='audio-player' >
-        <h2 className='title'>{this.props.fileName}</h2>
+        <h2 className='title'>{this.props.title}</h2>
         <p className='time'> {currentTime} / {duration} </p>
         <div 
           className='progress-container' 
@@ -139,19 +148,20 @@ class AudioPlayer extends React.Component {
               float: 'left', 
               width: this.state.hoverLocation + '%',
             }}/>
-          <div className='progress-bar'  style={{
+          <div className={'progress-bar' + (this.state.playing ? ' playing' : ' paused') }  style={{
               height: '100%',
-              background: 'blue',
               width: this.state.currentProgress + '%',
             }}>
           </div>
         </div>
-        <div className='controls' style={{height: '32px'}}>
+        <div className='controls' style={{height: '48px'}}>
           <PlayIcon display={!this.state.playing} onClick={this.handlePlayPause} />
           <PauseIcon display={this.state.playing}  onClick={this.handlePlayPause} />
           <ResetIcon onClick={this.handleReset}/>
           <BackIcon onClick={this.handleSeekBack}/>
           <ForwardIcon onClick={this.handleSeekForward} />
+          {/* TODO: make a rate slier ? <input type="range" min="0.1" max="2" value={this.state.playRate} onChange={this.handleRateChage} step="0.1" />
+          /<p> Rate {this.state.playRate} </p>*/}
         </div>
       </div>
     )

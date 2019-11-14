@@ -1,5 +1,7 @@
 //import './_art.scss'
 
+import './_audio.scss'
+
 import React from 'react'
 import { graphql } from "gatsby"
 
@@ -7,14 +9,13 @@ import Layout from '../../components/layout'
 import AudioPlayer from '../../components/audio-player'
 
 const IndexPage = ({data}) => {
-  console.log('data', data)
-  let tuneTest = data.allFile.edges[0].node
-  console.log({tuneTest})
+  let tunes = data.allFile.edges.map(e => e.node)
   return (
   <Layout >
     <div className='audio-page'>
-      <div className='audio-container'> </div>
-      <AudioPlayer audioURI={tuneTest.publicURL} fileName={tuneTest.base} /> 
+      <div className='audio-container'> 
+        { tunes.map((tune, i ) => <AudioPlayer audioURI={tune.publicURL} title={tune.base} />)}
+      </div>
     </div>
   </Layout>
   )

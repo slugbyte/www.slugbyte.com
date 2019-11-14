@@ -29,7 +29,7 @@ const Landing = () => (
       <div className='head'></div>
       <div className='tune'>
         <div className='player-container'>
-          <AudioPlayer audioURI={tune} fileName={'Untitled-06.wav'} />
+          <AudioPlayer audioURI={tune} title={'Untitled-06.wav'} />
         </div>
       </div>
       <div className='art-container'>
