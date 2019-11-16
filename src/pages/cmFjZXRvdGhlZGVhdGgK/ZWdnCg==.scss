@@ -54,7 +54,7 @@ body {
     width: $computer_width;
     height: $computer_height;
     padding: 32px;
-    background: url('../../images/egg-computer-icon.png');
+    background: url('../../asset/image/egg/egg-computer-icon.png');
     border-radius: 25px 25px 0px 0px;
 
     .power-switch {
@@ -79,17 +79,17 @@ body {
         right: 15px;
         width: 119px;
         height: 118px;
-        background: url('../../images/egg-computer-power-off-icon.png');
+        background: url('../../asset/image/egg/egg-computer-power-off-icon.png');
         z-index: 100;
       }
 
     }
 
     .power-switch label:hover~ div {
-      background: url('../../images/egg-computer-power-hover-icon.png');
+      background: url('../../asset/image/egg/egg-computer-power-hover-icon.png');
     }
     .power-switch input:checked ~ div {
-      background: url('../../images/egg-computer-power-on-icon.png');
+      background: url('../../asset/image/egg/egg-computer-power-on-icon.png');
     }
   }
 
@@ -149,19 +149,19 @@ body {
        button {
          width: 32px;
          height: 34px;
-         background: url('../../images/egg-menu-icon.png');
+         background: url('../../asset/image/egg/egg-menu-icon.png');
          background-repeat: no-repeat;
          background-size: 32px 32px;
          margin-left: 4px;
          margin-top: 2px;
 
          &:hover {
-           background: url('../../images/egg-menu-hover-icon.png');
+           background: url('../../asset/image/egg/egg-menu-hover-icon.png');
            background-size: 32px 32px;
          }
 
          &:active {
-           background: url('../../images/egg-menu-click-icon.png');
+           background: url('../../asset/image/egg/egg-menu-click-icon.png');
            background-size: 32px 32px;
          }
        } 
