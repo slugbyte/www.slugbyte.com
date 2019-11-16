@@ -8,8 +8,19 @@ $dye_black: #000;
 $dye_white: #fff;
 
 $pad: 0.5em;
+$header_height: 60px;
 
 $break_tablet: 640px;
 $break_desktop: 980px;
 
-$header_height: 60px;
+@mixin tablet_styles {
+  @media screen and (min-width: $break_tablet){
+    @content
+  }
+}
+
+@mixin desktop_styles {
+  @media screen and (min-width: $break_desktop){
+    @content
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../../../components/layout'
+import Layout from '../../../../components/layout'
 
-import Observable from '../../../components/observable'
+import Observable from '../../../../components/observable'
 
 import oContent from './observable-function.js'
 import oData from './observable-data.js'

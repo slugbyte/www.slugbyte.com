@@ -130,7 +130,7 @@
   }
 }
 
-@media screen and (min-width: $break_tablet){
+@include tablet_styles {
   .landing {
     .bio {
       button {
@@ -177,7 +177,7 @@
   }
 }
 
-@media screen and (min-width: $break_desktop){
+@include desktop_styles {
   .landing {
     .art-container {
       height: 980px;

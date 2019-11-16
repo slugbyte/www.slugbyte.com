@@ -1,3 +1,4 @@
+import '../style/_reset.scss'
 import './_index.scss'
 
 import React from 'react'

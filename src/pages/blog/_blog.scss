@@ -29,8 +29,14 @@
 }
 
 
-@media screen and (min-width: $break_tablet){
+@include tablet_styles {
   .blog-page {
+    .blog-post-item {
+      width: calc(50% - .25em);
+      float: left;
+      &:nth-child(even) {margin-left: $pad;}
+    } 
+
     .blog-container {
       width: 100%;
 
@@ -93,17 +99,8 @@
   }
 }
 
-@media screen and (min-width: $break_tablet) {
-  .blog-page {
-    .blog-post-item {
-      width: calc(50% - .25em);
-      float: left;
-      &:nth-child(even) {margin-left: $pad;}
-    } 
-  }
-}
 
-@media screen and (min-width: $break_desktop) {
+@include desktop_styles {
   .blog-page {
     padding: 0 ;
     .blog-post-item {
