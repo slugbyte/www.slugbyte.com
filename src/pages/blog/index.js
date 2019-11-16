@@ -5,8 +5,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
 import Image from '../../components/image'
-
-import posts from './post/posts.js'
+const postData = require('../../components/blog/create-blog-post-data.js')()
 
 const BlogPostItem = ({imageURL, metadata}) => (
   <div className='blog-post-item'>
@@ -21,7 +20,7 @@ const IndexPage = () => (
   <Layout >
     <div className='blog-page'>
       <div className='blog-container'>
-        {posts.map((post, i) => <BlogPostItem metadata={post.metadata} imageURL={post.imageURL}/> ) }
+        {postData.map((post, i) => <BlogPostItem metadata={post.metadata} imageURL={post.imageURL}/> ) }
       </div>
     </div>
   </Layout>

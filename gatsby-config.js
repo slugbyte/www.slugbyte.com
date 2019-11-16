@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `art`,
-        path: `${__dirname}/src/images/art`,
+        path: `${__dirname}/src/asset/image/art`,
       },
     },
     {
@@ -38,7 +38,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#fff',
         display: 'minimal-ui',
-        icon: 'src/images/slugbyte-icon.png', // This path is relative to the root of the site.
+        icon: 'src/asset/image/icon/slugbyte-icon.png', // browser tab icon
       },
     },
   ],

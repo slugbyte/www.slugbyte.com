@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Layout from '../../../../components/layout'
-import Markdown from '../../../../components/markdown'
+import Layout from '../../layout' 
+import Markdown from '../../markdown'
 import content from './index.md'
 import metadata from './metadata.json'
+
 
 const Page = () => (
   <Layout 

@@ -10,7 +10,7 @@
     //margin-left: -50%;
     height: 500px;
     background: $dye_lightish;
-    background: url('../images/colors.png' ) center ;
+    background: url('../asset/image/landing/colors.png' ) center ;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@
     height: 250px;
     background: $dye-light * .5;
     margin-top: $pad;
-    background: url('../images/streach-head.png');
+    background: url('../asset/image/landing/streach-head.png');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -82,7 +82,7 @@
     background: $dye-light * .5;
     //transform: translateX(-50%);
     margin-top: $pad;
-    background: url('../images/chain.png');
+    background: url('../asset/image/landing/chain.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;;

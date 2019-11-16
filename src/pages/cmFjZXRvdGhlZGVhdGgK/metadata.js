@@ -4,8 +4,8 @@ export default {
   frameRate: 24,
   images: {
     spriteSheet: require('../../asset/image/egg/egg.png'),
-    computerStartScreen: require('../../image/egg/egg-computer-startup-screen-icon.png'),
-    raceToTheDeathStartScreen: require('../../image/egg/egg-race-to-the-death-start-screen.png'),
+    computerStartScreen: require('../../asset/image/egg/egg-computer-startup-screen-icon.png'),
+    raceToTheDeathStartScreen: require('../../asset/image/egg/egg-race-to-the-death-start-screen.png'),
   },
   spriteNames: {
     'grass': 1, 
