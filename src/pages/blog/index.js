@@ -7,6 +7,8 @@ import Layout from '../../components/layout'
 import Image from '../../components/image'
 const postData = require('../../components/blog/create-blog-post-data.js')()
 
+import metadata from './metadata.json'
+
 const BlogPostItem = ({imageURL, metadata}) => (
   <div className='blog-post-item'>
     <img src={imageURL}/>
@@ -17,7 +19,7 @@ const BlogPostItem = ({imageURL, metadata}) => (
 )
 
 const IndexPage = () => (
-  <Layout >
+  <Layout metadata={metadata}>
     <div className='blog-page'>
       <div className='blog-container'>
         {postData.map((post, i) => <BlogPostItem metadata={post.metadata} imageURL={post.imageURL}/> ) }

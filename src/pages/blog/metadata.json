@@ -1,0 +1,13 @@
+{
+  "title": "blog",
+  "url": "/blog",
+  "description": "A slugbyte blog about programing, art, and music.",
+  "published": true,
+  "timestamp": "2019-11-16T17:46:32.828Z",
+  "keywords": [
+    "blog",
+    "programming",
+    "art",
+    "music"
+  ]
+}

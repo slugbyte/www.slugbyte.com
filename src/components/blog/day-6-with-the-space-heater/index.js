@@ -8,9 +8,7 @@ import metadata from './metadata.json'
 
 
 const Page = () => (
-  <Layout 
-     title={metadata.title} 
-     description={metadata.description}>
+  <Layout metadata={metadata}>
     <Markdown content={content} />
   </Layout>
 )
