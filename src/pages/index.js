@@ -5,7 +5,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 
 import artA from '../asset/image/art/art16.png'
 import artB from '../asset/image/art/art24.png'
