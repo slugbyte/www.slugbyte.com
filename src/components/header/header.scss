@@ -4,6 +4,10 @@
   position: relative;
   $burger-width: 60px;
 
+  .home {
+    color: $dye_light;
+  }
+
   display: block; 
   background: $dye_light;
   width: 100%;
@@ -47,7 +51,7 @@
       span, a {
         font-size: 2rem;
         font-family: monospace;
-        transition: 100ms;
+        transition: 200ms;
         text-decoration: none;
         cursor: default;
       }
@@ -97,8 +101,13 @@
       top: 60px;
       right: 0;
       width: 100%;
-      margin: 0;
-      transition: 200ms;
+      margin: 0; 
+      transition: 500ms;
+
+      li span {
+        display: inline-block;
+        width: 100%;
+      }
 
       li:nth-child(1) a {
         background: $dye_lightish * .9;
@@ -120,7 +129,7 @@
         background: $dye_lightish *.4;
       }
 
-      li a {
+      li span {
         text-align: right;
         font-size: 1.25em;
         padding: 6px;
