@@ -1,24 +1,28 @@
 @import '../../style/_var.scss';
 
 .blog-page {
+  padding: 0 $pad ;
   .blog-container {
     width: 100%;
-    .blog-post {
+    .blog-post-item {
       margin-top: $pad;
-      height: 100px;
-      h2 {
-        height: 3em;
-        background: $dye_black;
-      }
+      margin-bottom: 1em;
       img {
         width: 100%;
-        height: calc(100% - 3em);
-        border: none;
-        outline: none;
         background: $dye_light;
       }
+      h2 {
+        margin-top: $pad;
+        background: $dye_black;
+        padding: $pad;
+        color: $dye_white;
+      }
       p {
-        display: none;
+        margin-top: $pad;
+        height: 3em;
+      }
+      a {
+        margin-top: $pad;
       }
     }
   }
@@ -86,5 +90,27 @@
 
     }
 
+  }
+}
+
+@media screen and (min-width: $break_tablet) {
+  .blog-page {
+    .blog-post-item {
+      width: calc(50% - .25em);
+      float: left;
+      &:nth-child(even) {margin-left: $pad;}
+    } 
+  }
+}
+
+@media screen and (min-width: $break_desktop) {
+  .blog-page {
+    padding: 0 ;
+    .blog-post-item {
+      width: calc((100% / 3) - (1em / 3));
+      float: left;
+      &:nth-child(3n + 2) {margin-left: $pad;}
+      &:nth-child(3n + 3) {margin-left: $pad;}
+    } 
   }
 }
