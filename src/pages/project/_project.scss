@@ -1,69 +1,71 @@
 @import '../../style/_var.scss';
 
 .project-page {
+  padding-top: $pad;
   .project-container {
+    padding-left: $pad;
+    padding-right: $pad;
     width: 100%;
-    .project-post {
-      margin-top: $pad;
-      height: 20vw; 
-      img {
-        width: 20%;
-        height: 100%;
-        float: left;
-        border: none;
-        outline: none;
-        background: $dye_light;
+    .project-item {
+      background: black;
+      border-top: $pad solid $dye_black;
+      h2, p, a {
+        background: $dye_black;
+        color: $dye_white;
+        padding: $pad;
       }
 
       h2 {
-        height: 20vw; 
-        float: right; width: calc( 100% - 20vw);
-        background: $dye_black;
+        border-left: 0.35em solid $dye_black;
+        border-right: 0.35em solid $dye_black;
+        background: $dye_white;
+        color: $dye_black;
+        font-size: 1.5em;
+        padding: 0.25em;
+        text-align: right;
+        padding-right: 1em;
       }
 
       p {
-        display: none;
+        height: 4em;
+      }
+
+      a {
+        display: inline-block;
+      }
+
+      img {
+        width: 100%;
+      }
+    } 
+  }
+}
+
+@include tablet_styles {
+  .project-page {
+    .project-container {
+      .project-item {
+        width: calc(50% - .25em);
+        float: left;
+        &:nth-child(even){
+          margin-left: $pad;
+        }
       }
     }
   }
 }
 
-
-@media screen and (min-width: $break_tablet){
+@include desktop_styles {
   .project-page {
     .project-container {
-      width: 100%;
-
-      .project-post {
-        width: 100%;
-        height: 250px;
-        background: yellow;
-
-        h2 {
-          float: left;
-          width: 100%;
-          height: 3em;
-          background: $dye_black;
-        }
-
-        img {
-          float: left;
-          width: 50%;
-          height: calc(100% - 3em);
-          background: $dye_lightish;
-          border: none;
-        }
-
-        p {
-          display: inline-block;
-          float: left;
-          width: 50%;
-          height: calc(100% - 3em);
-          background: $dye_light;
-        }
+      padding: 0;
+      .project-item {
+        width: calc((100% / 3) - (1em / 3));
+        float: left;
+        &:nth-child(even) {margin-left: 0;}
+        &:nth-child(3n + 2){ margin-left: $pad; }
+        &:nth-child(3n + 3){ margin-left: $pad; }
       }
-
     }
-
   }
 }
