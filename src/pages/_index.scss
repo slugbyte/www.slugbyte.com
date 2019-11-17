@@ -3,45 +3,49 @@
 // TODO make wide screen look lit 
 
 .landing {
+  h2, p, a {
+    font-family: $default_font;;
+  }
   margin-top: $pad;
   .bio {
     position: relative;
     //width: 200%;
     //margin-left: -50%;
-    height: 500px;
+    width: 100%;
+    height: 250px;
     background: $dye_lightish;
-    background: url('../asset/image/landing/colors.png' ) center ;
+    background: url('../asset/image/landing/flowers.png') center ;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 200px ;
+    padding: 1em;
 
     h2 {
       display: inline-block;
-      color: $dye_light;
-      background: $dye_black;
-      padding: 2em;
-      font-size: 300%;
-      min-width: 500px;
-      width: 70%;
-      margin-top: 5%;
-      margin-left: 5%;
-    }
-
-    button {
-      position: absolute;
+      color: $shade_white;
+      text-align: right;
       padding: 0.25em;
-      bottom: 3em;
-      right: $pad;
-      background: $dye_light;
-      color: $dye_black;
-      font-size: 2em;
-      border-bottom: $pad solid white;
-      transform: skew(4deg) rotate(5deg);
-
-      &:hover { background: $dye_lightish; }
-      &:active{ background: $dye_darkish; }
+      background: $dye_black;
+      font-size: 3em;
     }
+
+    p {
+      background: white;
+      width: 100%;
+      padding: $pad;
+      font-size: 2em;
+    }
+
+    a {
+      display: inline-block; 
+      padding: $pad;
+      position: absolute;
+      background: white;
+      font-size: 2em;
+      bottom: 1em;
+      right: .5em;
+    }
+
 }
 
   .feature-container {
@@ -53,12 +57,40 @@
     }
 
     .feature-a {
-      background: $dye_light;
+      background: $shade_white;
+      padding-left: $pad;
+
+      h2 {
+        font-size: 2em; 
+        font-weight: bolder;
+        //text-align: right;
+      }
+      
+      p {
+        font-size: 3em;
+        text-align: right;
+        font-weight: 100;
+      }
+
+      a {
+        display: inline;
+        background: $dye-black;
+        color: $shade-white; 
+        font-size: 1.5em;
+        padding: 0.25em;
+        float: right;
+        //padding-left: $pad;
+
+      }
     }
     
     .feature-b {
       margin-top: $pad;
       background: $dye_light * .8;
+
+      background: url('../asset/image/project/peach.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
   }
 

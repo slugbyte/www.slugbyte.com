@@ -19,11 +19,16 @@ const Landing = () => (
   <Layout >
     <div className='landing'>
       <div className='bio'> 
-        <h2>Unlockn' <br/>ANSIICodes</h2>
-        <button>Read Post --&gt;</button>
+        <h2>For the Lulz</h2>
+        <p>The power of taking breaks to keep your focus and a hand full of command line games to help you.</p>
+        <Link to='/blog/for-the-lulz'> Read Post </Link>
       </div>
       <div className='feature-container'>
-        <div className='feature feature-a'></div>
+        <div className='feature feature-a'>
+          <h2>Day 6 with the space heater</h2>
+          <p>-- An exploration // runtime analysis of Javascript's different object creation methods --</p>
+          <Link to='/blog/day-6-with-the-space-heater'> Read Post </Link>
+        </div>
         <div className='feature feature-b'></div>
       </div>
       <div className='head'></div>
