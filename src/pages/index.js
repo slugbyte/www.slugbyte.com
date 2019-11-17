@@ -20,7 +20,7 @@ const Landing = () => (
     <div className='landing'>
       <div className='bio'> 
         <h2>For the Lulz</h2>
-        <p>The power of taking breaks to keep your focus and a hand full of command line games to help you.</p>
+        <p>The power of taking breaks to keep your focus and a hand full of command line games and tools to help you.</p>
         <Link to='/blog/for-the-lulz'> Read Post </Link>
       </div>
       <div className='head'></div>
