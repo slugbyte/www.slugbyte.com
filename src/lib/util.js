@@ -31,3 +31,7 @@ export const repeatFor = (duration, freq, cb, ...args) => new Promise((resolve, 
     resolve()
   }, duration)
 })
+
+export const smartClass = (options) => {
+  return Object.keys(options).filter(key => !!options[key]).join(' ')
+}

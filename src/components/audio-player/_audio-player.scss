@@ -1,0 +1,79 @@
+@import '../../style/_var.scss';
+
+@keyframes color_change {
+  from { background-color: blue; }
+  to { background-color: skyblue; }
+}
+
+.audio-player {
+
+  .title, .time {
+    display: inline;
+  }
+  .progress-bar {
+    transition: width 100ms; 
+  }
+
+  .progress-bar.playing {
+    animation: color_change 1s infinite alternate ;
+  }
+
+  .progress-bar.paused {
+    background: $dye_dark;
+  }
+
+
+  .play-icon, .pause-icon, .forward-icon, .back-icon, .reset-icon {
+    float: left;
+    margin-top: .5em;
+    margin-right: .5em;
+    width: 32px;
+    height: 32px;
+    user-select: none;
+  }
+
+  .play-icon {
+    fill: $dye_lightish;
+    &:hover {
+      fill: $dye_lightish * 0.7;
+    }
+    &:active {
+      fill: $dye_lightish * 0.4;
+    }
+  }
+  .pause-icon { fill: $dye_lightish * 0.9;
+    &:hover {
+      fill: $dye_lightish * 0.7;
+    }
+    &:active {
+      fill: $dye_lightish* 0.4;
+    }
+  }
+  .forward-icon {
+    fill: $dye_lightish;
+    &:hover {
+      fill: $dye_lightish * 0.7;
+    }
+    &:active {
+      fill: $dye_lightish * 0.4;
+    }
+  }
+  .back-icon {
+    fill: $dye_lightish;
+    &:hover {
+      fill: $dye_lightish * 0.7;
+    }
+    &:active {
+      fill: $dye_lightish * 0.4;
+    }
+  }
+  .reset-icon {
+    fill: red;
+    &:hover {
+      fill: red * 0.7;
+    }
+    &:active {
+      fill: red * 0.4;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../style/_var.scss';
+
+
+.audio-page {
+  padding-left: $pad;
+  padding-right: $pad;
+  header{
+    border: 2px solid black;
+    width: 70%;
+    margin-top: 2em;
+    margin-bottom: 5em;;
+    margin-left: 10%;
+    padding: 1em;
+    transform: perspective(35px) rotateX(1deg) rotateY(-.25deg) scale(1.1);
+    background: white;
+    box-shadow: 10px 20px black;
+    .title {
+      //margin-top: 2em;
+      margin-bottom: $pad;
+    }
+    .squigles {
+      width: 45%;
+      width: 80px;
+      height: 80px;
+
+      float: left;
+      //transform: rotate(9deg);
+      transition: 100ms;
+    }
+  }
+.audio-container {
+    margin-top: $pad;
+  }
+}
+
+@media screen and (min-width: $break_desktop){
+  .audio-page {
+    padding: 0;
+  }
+}

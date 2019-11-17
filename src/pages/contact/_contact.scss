@@ -1,0 +1,42 @@
+@import '../../style/_var.scss';
+
+.contact-page {
+  img {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: $pad;
+  }
+h2 {
+}
+  h2, h3, p, a{
+    margin-left: 1em;
+  text-align: center;
+  }
+
+  h2, h3 {
+    margin-top: $pad;
+  }
+}
+
+@media screen and (min-width: $break_tablet){
+  .contact-page {
+    position: relative;
+    padding-top: $pad;
+    img {
+      width: 50%;
+      //height: 50vw;
+      //float: left;
+    }
+
+    .info {
+      position: absolute;
+      left: 2em;
+      top: 80px;
+      //background: yellow;
+      float: left;
+      h2, h3, p, a {
+        text-align: right;
+      }
+    }
+  }
+}

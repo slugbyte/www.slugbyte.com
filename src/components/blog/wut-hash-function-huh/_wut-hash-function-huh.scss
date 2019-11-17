@@ -1,0 +1,33 @@
+@import '../../../style/_var.scss'; 
+@import '../../../style/_base.scss';
+
+.blog-post {
+  @include base;
+  padding-left: $pad;
+  padding-right: $pad;
+  padding-bottom: 60px;
+
+  .ochunk-8 {
+    overflow: hidden;
+  } 
+
+  .blog-nav {
+    right: calc(50% - (980px / 2));
+    
+    position: fixed;
+    border: 1px solid $dye_black;
+    padding: $pad;
+    bottom: $pad;
+    background: white;
+    a:nth-child(2), a:nth-child(3) {
+      margin-left: $pad;
+    }
+  }
+}
+
+@include desktop_styles {
+  .blog-post {
+    padding: 0;
+    padding-bottom: 60px;
+  }
+}

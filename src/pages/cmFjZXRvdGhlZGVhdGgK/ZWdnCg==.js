@@ -5,11 +5,11 @@ import * as util from '../../lib/util.js'
 const state  = {
   ctx: null,
   hault: false,
-  spriteSheet: util.loadImage(require('../../images/egg.png')),
-  startupScreen: util.loadImage(require('../../images/egg-computer-startup-screen-icon.png')),
-  gameStartScreen: util.loadImage(require('../../images/egg-race-to-the-death-start-screen.png')),
-  gameMenuScreen: util.loadImage(require('../../images/egg-rttd-menu-screen.png')),
-  gameHelpScreen: util.loadImage(require('../../images/egg-rttd-help-screen.png')),
+  spriteSheet: util.loadImage(require('../../asset/image/egg/egg.png')),
+  startupScreen: util.loadImage(require('../../asset/image/egg/egg-computer-startup-screen-icon.png')),
+  gameStartScreen: util.loadImage(require('../../asset/image/egg/egg-race-to-the-death-start-screen.png')),
+  gameMenuScreen: util.loadImage(require('../../asset/image/egg/egg-rttd-menu-screen.png')),
+  gameHelpScreen: util.loadImage(require('../../asset/image/egg/egg-rttd-help-screen.png')),
   startupSound: new Audio(require('./assets/egg-startup-sound.mp3')),
   intervalIDCache: [],
 }

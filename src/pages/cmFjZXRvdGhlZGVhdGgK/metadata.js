@@ -3,9 +3,9 @@ export default {
   height: 256,
   frameRate: 24,
   images: {
-    spriteSheet: require('../../images/egg.png'),
-    computerStartScreen: require('../../images/egg-computer-startup-screen-icon.png'),
-    raceToTheDeathStartScreen: require('../../images/egg-race-to-the-death-start-screen.png'),
+    spriteSheet: require('../../asset/image/egg/egg.png'),
+    computerStartScreen: require('../../asset/image/egg/egg-computer-startup-screen-icon.png'),
+    raceToTheDeathStartScreen: require('../../asset/image/egg/egg-race-to-the-death-start-screen.png'),
   },
   spriteNames: {
     'grass': 1, 
