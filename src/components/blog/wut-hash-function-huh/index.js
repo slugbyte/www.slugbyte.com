@@ -1,3 +1,4 @@
+import './_wut-hash-function-huh.scss'
 import React from 'react'
 
 import {Link} from 'gatsby'
@@ -11,8 +12,10 @@ import metadata from './metadata.json'
 
 const Page = () => (
   <Layout metadata={metadata}>
-    <Observable content={oContent} data={oData} expose={['stringTo32BitBlocks', 'hash', 'mix', 'hashedLoremToPoints']}/>
-    <BlogNav metadata={metadata} />
+    <div className='blog-post'>
+      <Observable content={oContent} data={oData} expose={['stringTo32BitBlocks', 'hash', 'mix', 'hashedLoremToPoints']}/>
+      <BlogNav metadata={metadata} />
+    </div>
   </Layout>
 )
 

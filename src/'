@@ -1,0 +1,79 @@
+@import './_var.scss';
+
+@mixin base {
+  font-weight: 400;
+  color: $shade_dark;
+
+  small, .text_small {font-size: 0.937em;}
+
+  span, strong, em, i, code {
+    display: inline;
+  }
+
+  strong, em {
+    font-style: italic;
+  }
+
+  pre {
+    background: $shade_light;
+    padding: $pad;
+    tab-size: 8;
+  }
+
+  code { 
+    background: $shade_light;
+    padding: 0.25em;
+    font-size: .8em;
+  }
+
+  p {margin-bottom: $pad;}
+
+  h1, h2, h3, h4, h5 {
+    margin: 2.75rem 0 1rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: $dye_black;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 1.383em;
+  }
+
+  h2 {font-size: 1.296em;}
+
+  h3 {font-size: 1.215em;}
+
+  h4 {font-size: 1.138em;}
+
+  h5 {font-size: 1.067em;}
+
+  li {
+    display: list-item;
+  }
+
+  ul, ol {
+    margin-left: 1em;
+    margin-bottom: $pad;
+    padding-left: $pad;
+    list-style-type: unset;
+  }
+
+  ul {
+    list-style: circle ;
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    ul {
+      list-style: disc;
+    }
+  }
+}

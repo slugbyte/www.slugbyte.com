@@ -9,6 +9,7 @@
       background: red;
       margin-top: $pad;
     }
+
   }
 }
 
@@ -20,6 +21,7 @@
         height: calc(50vw - .25em); // MAGIC
         float: left;
       }
+
       .art:nth-child(even){
         margin-left: $pad;
       }
@@ -53,6 +55,10 @@
           margin-left: $pad;
           //margin-left: .75em;
         }
+      }
+      .art.focused {
+        width: calc((100% * (2/3)));
+        height: calc((980px * (2/3)) - .5em);
       }
 
 

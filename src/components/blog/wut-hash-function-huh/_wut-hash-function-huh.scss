@@ -1,0 +1,6 @@
+@import '../../../style/_var.scss'; 
+@import '../../../style/_base.scss';
+
+.blog-post {
+  @include base;
+}

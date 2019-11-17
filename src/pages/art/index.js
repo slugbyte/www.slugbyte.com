@@ -14,7 +14,7 @@ const IndexPage = ({data}) => {
     <div className='art-page'>
       <div className='art-container'>
         {publicPaths.map((path, i) => ( 
-          <img className='art' src={path}/>
+          <img key={i} className={'art ' + (i === 3 ? 'focused' : '')} src={path}/>
         ))}
       </div>
   </div>
