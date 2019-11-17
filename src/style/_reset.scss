@@ -18,9 +18,13 @@ head {
   display: none;
 }
 
+html {
+  height: 100vw;
+}
+
 html, body {
   width: 100%;
-  height: auto;
+  //height: auto;
   //margin-top: $header_height;
 
   //height: 100%;
