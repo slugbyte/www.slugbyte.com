@@ -1,9 +1,9 @@
-import './ZWdnCg==.scss'
+import '../../components/egg/ZWdnCg==.scss'
 
 import React from 'react'
 import {Link} from 'gatsby'
-import egg from './ZWdnCg==.js'
-import metadata from './metadata.js'
+import egg from '../../components/egg/ZWdnCg==.js'
+import metadata from '../../components/egg/metadata.js'
 
 import { 
   setupEngine, 
@@ -14,7 +14,7 @@ import {
   drawGameHelpScreen,
   drawGameMenuScreen,
   drawGameStartSequence,
-} from './ZWdnCg==.js'
+} from '../../components/egg/ZWdnCg==.js'
 
 let defaultState = {
   computerOn: false,
