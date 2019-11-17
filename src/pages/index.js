@@ -23,6 +23,7 @@ const Landing = () => (
         <p>The power of taking breaks to keep your focus and a hand full of command line games to help you.</p>
         <Link to='/blog/for-the-lulz'> Read Post </Link>
       </div>
+      <div className='head'></div>
       <div className='feature-container'>
         <div className='feature feature-a'>
           <h2>Day 6 with the space heater</h2>
@@ -31,17 +32,18 @@ const Landing = () => (
         </div>
         <div className='feature feature-b'></div>
       </div>
-      <div className='head'></div>
       <div className='tune'>
         <div className='player-container'>
           <AudioPlayer audioURI={tune} title={'Untitled-06.wav'} />
         </div>
+        <Link to='/audio'> More Audio </Link>
       </div>
       <div className='art-container'>
         <img src={artA} className='art art-a'/>
         <img src={artB} className='art art-b'/>
         <img src={artC} className='art art-c'/>
         <img src={artD} className='art art-d'/>
+        <Link to='/art'> More Art </Link>
       </div>
     </div>
   </Layout>

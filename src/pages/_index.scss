@@ -113,12 +113,24 @@
     height: 250px;
     background: $dye-light * .5;
     //transform: translateX(-50%);
-    margin-top: $pad;
+    margin-top: 3em;
     background: url('../asset/image/landing/chain.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;;
     //background-repeat: no-repeat;
+    a {
+      position: absolute;
+      display: inline-block;
+      //width: 100%;
+      font-size: 1.5em;
+      text-align: right;
+      padding: $pad;
+      bottom: 0;
+      right: 0;
+      //padding-right: 2.55em;
+      background: $shade_white;
+    }
 
     .player-container {
       position: absolute;
@@ -128,13 +140,17 @@
       width: calc(100% - 6em); //MAGIC
       top: 50%;
       transform: translateY(-50%);
+      
+      h2 {
+        font-size: 1.25em;
+      }
     }
 
     //background-size: cover;
   }
 
   .art-container {
-    margin-top: $pad;
+    margin-top: 2.5em;
     width: 100%;
     .art {
       height: 100vw;
@@ -191,6 +207,16 @@
     .art-container {
       width: 100%;
       height: 100vw;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: right;
+        padding: $pad;
+        padding-right: 2.55em;
+      }
+
       .art {
         width: calc(50vw - .25em); // MAGIC
         height: calc(50vw - .25em); // MAGIC 
