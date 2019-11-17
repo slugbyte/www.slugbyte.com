@@ -156,7 +156,7 @@ If the plotted points are not randomly spaced well then the chances of a hash co
   main.variable(observer()).define(["DOM","width","hashedLoremToPoints"], function(DOM,width,hashedLoremToPoints)
 {  
   const height = 400
-  const context = DOM.context2d(width, height);
+  const context = DOM.context2d(980, height); // MAGIC
   
   let colors = ['orange', 'black',  'red',  'magenta', ]
   let points = hashedLoremToPoints()

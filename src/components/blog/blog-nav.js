@@ -14,11 +14,11 @@ const BlogNav = ({metadata}) => {
   let prev = postData[nextIndex].metadata.url
   let next = postData[prevIndex].metadata.url
   return (
-    <footer>
+    <footer className='blog-nav'>
       <nav>
-        <Link to={prev} className='back-btn'> Prev </Link>
+        <Link to={prev} className='back-btn'> Prev Post </Link>
         <Link to='/blog' className='back-btn'> Blog </Link>
-        <Link to={next} className='back-btn'> Next </Link>
+        <Link to={next} className='back-btn'> Next Post </Link>
       </nav>
     </footer>
   )
