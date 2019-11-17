@@ -58,11 +58,20 @@ class ArtBrowser extends React.Component {
       <div className='art-browser'>
         { this.state.selected ? (
           <div onClick={this.handleUnselectArt} className='selected'>
-            <ArtItem onClick={this.handleUnselectArt} art={this.state.selected} selected /> 
+            <ArtItem 
+              onClick={this.handleUnselectArt} 
+              art={this.state.selected} 
+              selected /> 
             <p>click anywhere to close</p>
           </div>
         ) : '' }
-        {artList.map((art, i) => <ArtItem key={i} onClick={this.handleSelectArt} art={art} />)}
+        <div className='art-item-container'>
+        {artList.map((art, i) => 
+           <ArtItem 
+              key={i} 
+              onClick={this.handleSelectArt} 
+              art={art} />)}
+        </div>
       </div>
     )
   }

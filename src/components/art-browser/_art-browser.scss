@@ -75,6 +75,10 @@
     .big {
       width: calc(100% * (2/3));
     }
+    .art-item-container {
+      transform: translateX(-.5em);
+      z-index: -100;
+    }
     .selected {
       position: fixed !important;
       float: none;
@@ -83,6 +87,7 @@
       background: white;
       width: 100vw; 
       height: 100vh; 
+      z-index: 100;
 
       .art-item  {
         position: fixed !important;
