@@ -1,0 +1,49 @@
+@import '../../style/_var.scss'; 
+
+.art-browser {
+  padding-top: $pad;
+  padding-bottom: $pad;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  .art-item {
+    align-self: baseline;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    width: 100%;
+    margin-bottom: $pad;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include tablet_styles {
+  .art-browser {
+    .art-item {
+      width: 50%;
+      float: left;
+    }
+
+    .big {
+      width: 100%;
+    }
+
+    .is-right {
+      float: right !important;
+    }
+  }
+}
+
+@include desktop_styles{
+  .art-browser {
+    width: calc(100% + 1em);
+    transform: translateX(-0.5em);
+    margin: 0 auto;
+    .art-item {
+      width: calc(100%/3);
+    }
+    .big {
+      width: calc(100% * (2/3));
+    }
+  }
+}
