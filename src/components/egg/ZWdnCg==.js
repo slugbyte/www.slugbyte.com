@@ -2,6 +2,13 @@ import {random} from 'lodash/fp'
 import metadata from './metadata.js'
 import * as util from '../../lib/util.js'
 
+// for gatsby build
+const Audio = typeof window === 'undefined' ? function Audio(){} : window.Audio
+
+const window = typeof window !== 'undefined' ? window : {
+  addEventListener: () => {},
+}
+
 const state  = {
   ctx: null,
   hault: false,

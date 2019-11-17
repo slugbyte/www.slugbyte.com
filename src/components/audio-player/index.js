@@ -8,6 +8,13 @@ import resetIcon from './svg/reset.svg'
 import forwardIcon from './svg/forward.svg'
 import backIcon from './svg/back.svg'
 
+function AudioMock(){
+  this.load = () => {}
+  this.addEventListener = () => {}
+}
+
+const Audio = typeof window === 'undefined' ? AudioMock : window.Audio
+
 let minuteFormat = (seconds) => {
   let minutes = Math.floor(seconds / 60)
   seconds = Math.floor(seconds % 60)

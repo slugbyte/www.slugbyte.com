@@ -1,6 +1,10 @@
 export const log = (...args) => __PRODUCTION__ ? undefined : console.log(...args)
 export const logError = (...args) => __PRODUCTION__ ? undefined : console.error(...args)
 
+
+// for gatsby build
+const Image = typeof window === 'undefined' ? function Image(){} : window.Image
+
 // used by ZWdnCg== and for canvas images
 export const loadImage = (url) => {
   const img = new Image()
