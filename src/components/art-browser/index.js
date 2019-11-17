@@ -4,15 +4,15 @@ import {smartClass} from '../../lib/util.js'
 import React from 'react'
 
 let count = 0 
-let isLeft = true
+let isRight = false
 const artList = require('./art-list.js').default.map((e, i) => {
   if(!!(count % 9 == 0)) {
-    isLeft = !isLeft
+    isRight = !isRight
     e.isBig = true
-    e.isLeft = isLeft
+    e.isRight = isRight
   } else {
     e.isBig = false
-    e.isLeft = isLeft
+    e.isRight = isRight
   }
   count ++
   return e
@@ -24,8 +24,7 @@ const ArtItem = ({art}) => {
   let className = smartClass({
     'art-item': true,
     'big': art.isBig,
-    'is-left': art.isLeft,
-    'is-right': !art.isLeft,
+    'is-right': art.isRight,
   })
   return (
     <div className={className}>
