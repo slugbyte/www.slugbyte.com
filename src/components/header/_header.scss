@@ -4,12 +4,8 @@
   position: relative;
   $burger-width: 60px;
 
-  .home {
-    color: $dye_light;
-  }
-
   display: block; 
-  background: $dye_light;
+  background: $shade_white;
   width: 100%;
   height: $header_height;
 
@@ -17,6 +13,7 @@
     display: block; 
     width: 100%;
     height: 100%;
+    z-index: 1000;
     margin: 0 auto;
   }
 
@@ -25,6 +22,8 @@
     width: 305px;
     height: 100%;
     margin: 0 auto; 
+    z-index: 1700;
+    background: white;
     transform: translateX(- $burger-width / 2); // center horizontal 
     .site-logo-image {
       display: block;
@@ -88,7 +87,7 @@
     right: 0;
     width: 30%;
     height: 100%;
-    z-index: -99;
+    z-index: 1000;
 
     ul.hide {
       z-index: -100;
@@ -97,48 +96,25 @@
 
     ul {
       position: absolute;
-      z-index: 1;
+      z-index: 500;
       top: 60px;
       right: 0;
       width: 100%;
       margin: 0; 
       transition: 500ms;
 
-      li span {
+      li {
         display: inline-block;
         width: 100%;
-      }
-
-      li:nth-child(1) a {
-        background: $dye_lightish * .9;
-      }
-      li:nth-child(2) a {
-        background: $dye_lightish *.8;
-      }
-      li:nth-child(3) a {
-        background: $dye_lightish *.7;
-      }
-      li:nth-child(4) a {
-        background: $dye_lightish *.6;
-      }
-      li:nth-child(5) a {
-        background: $dye_lightish  *.5;
-      }
-      
-      li:nth-child(6) a {
-        background: $dye_lightish *.4;
-      }
-
-      li span {
-        text-align: right;
-        font-size: 1.25em;
-        padding: 6px;
-        text-decoration: none;
-        transition: 200ms;
-
-        &:hover,&:focus {
-          background: $dye_light * 0.4;
-          transform: translateX(-12px);
+        height: 2em;
+        background: $dye_white;
+        &:hover { background: $shade_lightish; }
+        &:active { background: $shade_medium; }
+        a {
+          width: 100%;
+          height: 100%;
+          padding-top: 0.5em;
+          text-align: center;
         }
       }
     }
@@ -150,7 +126,8 @@
       width: 60px;
       height: 60px;
       padding: 12px;
-      background: none;
+      z-index: 1100;
+      background: white;
 
       .button {
         width: 100%;
@@ -180,27 +157,52 @@
       }
     }
   }
-
-
 }
 
 @media screen and (min-width: $break_tablet){
   .site-header {
+    main {
+      z-index: 1000;
+      background: white;
+    }
+
     .site-nav {
       ul {
         width: 150px;
+        background: $dye_white;
+        li {
+          position: relative;
+          width: 100%;
+          height: 2em;
+          margin: 0;
+          background: $dye_white;
+          &:hover { background: $shade_lightish } 
+          &:active { background: $shade_medium; }
+          a {
+            background: none;
+            width: 100%;
+            text-decoration: none;
+            position: absolute;
+            height: 100%;
+            padding-top: .5em;
+            padding-right: .5em;;
+            right: 0;
+            text-align: right;
+          }
+        }
         li:nth-child(2) a {
-          transform: translateX(-10px);
+          padding-right: 1em;
         }
         li:nth-child(3) a {
-         transform: translateX(-20px);
+          padding-right: 1.5em;
         }
         li:nth-child(4) a {
-          transform: translateX(-10px);
+          padding-right: 1em;
         }
         li:nth-child(6) a {
-          transform: translateX(-10px);
+          padding-right: 1.5em;
         }
+
       }
     }
   }
@@ -223,101 +225,53 @@
     }
 
     .site-nav {
-      position: static;
-      width: calc(60% - 2.5em);
+        position: static;
+      width: 50%;
       height: $header_height;
       float: right;
 
-      ul.hide {
-        position: static;
-        z-index: 0;
-        height: 100%;
-        transform: translateY(0);
+      .hamburger {
+        display: none;
       }
 
       ul {
         position: static;
+        top: 0;
         width: 100%;
         height: 100%;
-        padding: 0;
         margin: 0;
-        float: left;
-        float: right;
-        //transform: translateY(100%);
+        padding: 0;
 
         li {
-          transform: translateY(0) !important;
-        }
-
-        li:nth-child(2) a {
-          transform: translateX(0px);
-          &:hover {
-            transform: translateX(-$pad);
-          }
-        }
-        li:nth-child(3) a {
-         transform: translateX(0px);
-          &:hover {
-            transform: translateX(-$pad);
-          }
-        }
-        li:nth-child(4) a {
-          transform: translateX(0px);
-          &:hover {
-            transform: translateX(-$pad);
-          }
-        }
-        li:nth-child(6) a {
-          transform: translateX(0px);
-          &:hover {
-            transform: translateX(-$pad);
-          }
-        }
-
-        li:nth-child(1) {
-          background: $dye_lightish * .9;
-        }
-        li:nth-child(2) {
-          background: $dye_lightish * .8;
-        }
-        li:nth-child(3) {
-          background: $dye_lightish * .7;
-        }
-        li:nth-child(4) {
-          background: $dye_lightish * .6;
-        }
-        li:nth-child(5) {
-          background: $dye_lightish * .5;
-        }
-        li:nth-child(6) {
-          background: $dye_lightish * .4;
-        }
-
-        li {
+          position: static;
           width: calc(100% / 3);
-          float: left;
           height: 50%;
-          transform: translate(0, -200%);
+          margin: 0;
+          padding: 0;
+          float: left;
+          border-bottom: 1px solid black;
           a {
-            background: none !important;
+            transform: translateX(0) !important;
+            position: static;
             width: 100%;
             height: 100%;
+            margin: 0;
             padding: 0;
-            padding-top: $pad / 2;
-            padding-right: $pad;
-            transform: translateX(0px);
+            padding-top: 0.25em;
+            text-align: center;
+            text-decoration: none;
           }
 
-          &:hover {
-            background: $dye_light * 0.4;
-            a {
-              transform: translateX($pad) !important;
-              width: 5%;
-            }
-          }
-
+          &:hover { background: $shade_lightish; }
+          &:active{ background: $shade_medium; }
         }
       }
+
+      ul.hide {
+        display: block;
+      }
+      
+
     }
   }
 }

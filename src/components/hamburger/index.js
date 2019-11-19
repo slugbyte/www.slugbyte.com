@@ -27,12 +27,12 @@ class Hamburger extends React.Component {
           </button>
         </div>
         <ul className={this.state.open ? '' : 'hide'}>
-          <li><span><Link tabIndex={this.state.open ? '0' : '-1'} to='/art'>art_</Link></span></li>
-          <li><span><Link tabIndex={this.state.open ? '0' : '-1'} to='/hack'>hack_</Link> </span></li>
-          <li><span><Link tabIndex={this.state.open ? '0' : '-1'} to='/audio'>audio_</Link> </span></li>
-          <li><span><Link tabIndex={this.state.open ? '0' : '-1'} to='/blog'>blog_</Link> </span></li>
-          <li><span><Link tabIndex={this.state.open ? '0' : '-1'} to='/contact'>contact_</Link> </span></li>
-          <li><span><Link className='home' tabIndex={this.state.open ? '0' : '-1'} to='/'>[home]</Link> </span></li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/art'>art_</Link></li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/hack'>hack_</Link></li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/audio'>audio_</Link></li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/blog'>blog_</Link></li>
+          <li><Link tabIndex={this.state.open ? '0' : '-1'} to='/contact'>contact_</Link></li>
+          <li><Link className='home' tabIndex={this.state.open ? '0' : '-1'} to='/'>[home]</Link></li>
         </ul>
       </nav>
     )

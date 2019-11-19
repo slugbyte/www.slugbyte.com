@@ -1,4 +1,4 @@
-import './header.scss'
+import './_header.scss'
 
 import PropTypes from 'prop-types'
 import React from 'react'
