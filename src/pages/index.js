@@ -6,10 +6,14 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-import artA from '../asset/image/art/laundry.png'
-import artB from '../asset/image/art/grocey-fashion.png'
-import artC from '../asset/image/art/cook-out.png'
-import artD from '../asset/image/art/photo-shoot.png'
+//import artA from '../asset/image/art/laundry.png'
+//import artB from '../asset/image/art/grocey-fashion.png'
+//import artC from '../asset/image/art/cook-out.png'
+//import artD from '../asset/image/art/photo-shoot.png'
+import artA from '../asset/image/art/500/laundry-500.png'
+import artB from '../asset/image/art/500/grocey-fashion-500.png'
+import artC from '../asset/image/art/500/cook-out-500.png'
+import artD from '../asset/image/art/500/photo-shoot-500.png'
 
 import AudioPlayer from '../components/audio-player'
 import tune from '../asset/tune/Untitled-06.wav'

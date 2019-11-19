@@ -14,7 +14,7 @@
     width: 100%;
     height: 350px;
     background: $dye_lightish;
-    background: url('../asset/image/landing/flowers.png') center ;
+    background: url('../asset/image/landing/1000/flowers-1000.png') center ;
     background-attachment: fixed;
     background-position: 0 160px;
     background-size: 600px ;
@@ -88,7 +88,7 @@
       margin-top: $pad;
       background: $dye_light * .8;
 
-      background: url('../asset/image/project/peach.png');
+      background: url('../asset/image/project/500/peach-500.png');
       background-size: 100%;
       background-repeat: no-repeat;
     }
@@ -99,7 +99,7 @@
     height: 250px;
     background: $dye-light * .5;
     margin-top: $pad;
-    background: url('../asset/image/landing/streach-head.png');
+    background: url('../asset/image/landing/1000/streach-head-1000.png');
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -114,7 +114,7 @@
     background: $dye-light * .5;
     //transform: translateX(-50%);
     margin-top: 3em;
-    background: url('../asset/image/landing/chain.png');
+    background: url('../asset/image/landing/1000/chain-1000.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;;
