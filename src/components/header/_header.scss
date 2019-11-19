@@ -22,7 +22,7 @@
     width: 305px;
     height: 100%;
     margin: 0 auto; 
-    z-index: 1700;
+    z-index: 999;
     background: white;
     transform: translateX(- $burger-width / 2); // center horizontal 
     .site-logo-image {
@@ -45,6 +45,7 @@
       float: left;
       margin-left: $pad;
       transform: translateY(calc(60% - 0.5em));
+      z-index: 999;
       text-align: center;
 
       span, a {
