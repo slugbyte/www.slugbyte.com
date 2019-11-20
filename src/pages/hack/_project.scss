@@ -35,7 +35,8 @@
       }
 
       img {
-        width: 100%;
+        width: 100%; 
+        height: calc(50vw - 1em) ;
       }
     } 
   }
@@ -49,6 +50,9 @@
         float: left;
         &:nth-child(even){
           margin-left: $pad;
+        }
+        img {
+          height: calc(25vw - .25em);
         }
       }
     }
@@ -65,6 +69,9 @@
         &:nth-child(even) {margin-left: 0;}
         &:nth-child(3n + 2){ margin-left: $pad; }
         &:nth-child(3n + 3){ margin-left: $pad; }
+        img {
+          height: calc((980px / 6) - (1em / 6));
+        }
       }
     }
   }
