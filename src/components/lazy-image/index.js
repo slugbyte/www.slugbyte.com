@@ -1,9 +1,13 @@
 import React from 'react'
 
-const LazyImage = ({image}) => {
+const LazyImage = ({image, className}) => {
+  if (className)
+    className += ' lazy-image'
+  else 
+    className = 'lazy-image'
   return (
     <img 
-      className='lazy-image'
+      className={className}
       alt={image.description} 
       src={image.url}
       style={{

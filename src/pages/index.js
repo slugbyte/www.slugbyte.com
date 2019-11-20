@@ -5,19 +5,40 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import LazyImage from '../components/lazy-image'
 
-//import artA from '../asset/image/art/laundry.png'
-//import artB from '../asset/image/art/grocey-fashion.png'
-//import artC from '../asset/image/art/cook-out.png'
-//import artD from '../asset/image/art/photo-shoot.png'
-import artA from '../asset/image/art/500/laundry-500.png'
-import artB from '../asset/image/art/500/grocey-fashion-500.png'
-import artC from '../asset/image/art/500/cook-out-500.png'
-import artD from '../asset/image/art/500/photo-shoot-500.png'
+let artA = {
+  description: 'laundry', 
+  url: require('../asset/image/art/500/laundry-500.png'),
+  thumbnail: require('../asset/image/art/50/laundry-50.png'),
+}
+
+let artB = {
+  description: 'grocery fashion', 
+  url: require('../asset/image/art/500/grocey-fashion-500.png'),
+  thumbnail: require('../asset/image/art/50/grocey-fashion-50.png'),
+}
+
+let artC = {
+  description: 'cook-out', 
+  url: require('../asset/image/art/500/cook-out-500.png'),
+  thumbnail: require('../asset/image/art/50/cook-out-50.png'),
+}
+
+let artD = {
+  description: 'photo-shoot', 
+  url: require('../asset/image/art/500/photo-shoot-500.png'),
+  thumbnail: require('../asset/image/art/50/photo-shoot-50.png'),
+}
+
+let head = {
+  description: 'Stetch head',
+  url: require('../asset/image/landing/1000/streach-head-1000.png'),
+  thumbnail: require('../asset/image/landing/50/streach-head-50.png'),
+}
 
 import AudioPlayer from '../components/audio-player'
 import tune from '../asset/tune/Untitled-06.wav'
-console.log('tune', tune)
 
 const Landing = () => (
   <Layout >
@@ -27,7 +48,9 @@ const Landing = () => (
         <p>The power of taking breaks to keep your focus and a hand full of command line games and tools to help you.</p>
         <Link to='/blog/for-the-lulz'> Read Post </Link>
       </div>
-      <div className='head'></div>
+      
+      <LazyImage className='head' image={head} />
+
       <div className='feature-container'>
         <div className='feature feature-a'>
           <h2>Day 6 with the space heater</h2>
@@ -36,6 +59,7 @@ const Landing = () => (
         </div>
         <div className='feature feature-b'></div>
       </div>
+
       <div className='tune'>
         <div className='player-container'>
           <AudioPlayer audioURI={tune} title={'Untitled-06.wav'} />
@@ -43,10 +67,10 @@ const Landing = () => (
         <Link to='/audio'> More Audio </Link>
       </div>
       <div className='art-container'>
-        <img src={artA} className='art art-a'/>
-        <img src={artB} className='art art-b'/>
-        <img src={artC} className='art art-c'/>
-        <img src={artD} className='art art-d'/>
+        <LazyImage className='art art-a' image={artA} />
+        <LazyImage className='art art-b' image={artB} />
+        <LazyImage className='art art-c' image={artC} />
+        <LazyImage className='art art-d' image={artD} />
         <Link to='/art'> More Art </Link>
       </div>
     </div>
