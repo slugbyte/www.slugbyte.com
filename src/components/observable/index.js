@@ -23,7 +23,11 @@ class Observable  extends React.Component {
     runtime.module(this.props.content, name => {
       let container = document.createElement('div')
       if (name) {
+        try {
         container.className = ('ochunk-' + name).replace(' ', '-').toLowerCase()
+        } catch(e) {
+          console.error(e)
+        }
       } else {
         container.className = 'ochunk-'+  oChunkCount++
       }
@@ -32,8 +36,13 @@ class Observable  extends React.Component {
       container.appendChild(next)
       if (this.props.expose.indexOf(name) > -1){
         let pre = document.createElement('pre')
-        let fnText =  vars[name].value.toString().split('\n').slice(1, -1)
-        fnText[0] = fnText[0].replace('return ', '')
+        let fnText =  vars[name].value.toString().split('\n')
+        try {
+          console.log({fnText, vars, data})
+          fnText[0] = fnText[0].replace('return ', '')
+        } catch (e) {
+          console.error(e)
+        }
         fnText = fnText.join('\n')
         pre.textContent = fnText
         container.appendChild(pre)

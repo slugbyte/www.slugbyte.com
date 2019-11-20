@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
 
-import headShot from './head-shot.png'
+import headShot from './head-shot-500.png'
 
 const IndexPage = () => (
   <Layout >
