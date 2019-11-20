@@ -2,6 +2,7 @@ import './_art-browser.scss'
 
 import {smartClass} from '../../lib/util.js'
 import React from 'react'
+import LazyImage from '../lazy-image'
 
 let count = 0 
 let isRight = false
@@ -20,8 +21,6 @@ const artList = require('./art-list.js').default
   return e
 })
 
-console.log('artList', artList)
-
 const ArtItem = ({art, onClick}) => {
   let className = smartClass({
     'art-item': true,
@@ -30,7 +29,7 @@ const ArtItem = ({art, onClick}) => {
   })
   return (
     <div onClick={() => onClick(art)} className={className}>
-      <img src={art.imageURL} alt={art.description} />
+      <LazyImage image={art} />
     </div>
   )
 }
