@@ -3,14 +3,20 @@
 .contact-page {
   img {
     width: 60%;
+    height: 60vw;
     margin: 0 auto;
     margin-top: $pad;
+    background: red;
   }
-h2 {
-}
+
+  .info {
+    padding: .5em;
+    background: white ;
+  }
+
   h2, h3, p, a{
     margin-left: 1em;
-  text-align: center;
+    text-align: center;
   }
 
   h2, h3 {
@@ -24,8 +30,8 @@ h2 {
     padding-top: $pad;
     img {
       width: 50%;
-      //height: 50vw;
-      //float: left;
+      height: 50vw;
+      transform: translateX(5em);
     }
 
     .info {
@@ -37,6 +43,15 @@ h2 {
       h2, h3, p, a {
         text-align: right;
       }
+    }
+  }
+}
+
+@include desktop_styles {
+  .contact-page {
+    img {
+      width: calc(980px /2);
+      height: calc(980px /2);
     }
   }
 }
