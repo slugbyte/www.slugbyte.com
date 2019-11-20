@@ -2,4 +2,12 @@
 
 .blog-post {
   @include base;
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+@include desktop_styles {
+  .blog-post {
+    padding: 0;
+  }
 }
