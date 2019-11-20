@@ -11,13 +11,7 @@ class Observable  extends React.Component {
 
   componentDidMount(){
     let ref = document.getElementById(this.randomID)
-    let data = this.props.data
     let runtime = new Runtime()
-    let module = data.modules.filter(m => m.id == data.id)[0]
-    let vars = module.variables.reduce((r, v) => {
-      r[v.name] = v
-      return r 
-    }, {})
 
     let oChunkCount = 0 
     runtime.module(this.props.content, name => {
@@ -34,16 +28,11 @@ class Observable  extends React.Component {
       ref.appendChild(container)
       let next = document.createElement('div')
       container.appendChild(next)
-      if (this.props.expose.indexOf(name) > -1){
+
+      let exposeNames = Object.keys(this.props.expose)
+      if (exposeNames.indexOf(name) > -1){
         let pre = document.createElement('pre')
-        let fnText =  vars[name].value.toString().split('\n')
-        try {
-          console.log({fnText, vars, data})
-          fnText[0] = fnText[0].replace('return ', '')
-        } catch (e) {
-          console.error(e)
-        }
-        fnText = fnText.join('\n')
+        let fnText = this.props.expose[name].trim()
         pre.textContent = fnText
         container.appendChild(pre)
       }

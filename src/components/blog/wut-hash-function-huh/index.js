@@ -7,7 +7,6 @@ import Observable from '../../observable'
 import BlogNav from '../blog-nav.js'
 
 import oContent from './observable-function.js'
-import oData from './observable-data.js'
 import metadata from './metadata.json'
 
 let expose = {
@@ -39,18 +38,14 @@ function hash(data){
   return state.map(n => Math.abs(n).toString(16)).join('')
 }
 `, mix: `
-// This is function generates the points plotted above
-function hashedLoremToPoints(){
-  let allHashes = hashedLorem.join('')
-  let result = []  
-  for(var i=0;i<allHashes.length; i+=16){
-    // x and y are both 32 bit numbers
-    result.push({
-      x: parseInt(allHashes.slice(i, i+8), 16), 
-      y: parseInt(allHashes.slice(i+8, i+16), 16), 
-    })
-  }
-  return result
+function mix(state, block){
+  // Step 3 the mix function uses *+-, ^&|, >><< and % to mix the current block in with the state
+  let select = block % 4
+  let zero = state[0] + (state[select] * block) ^ state[state[select] % 4] << 3 | block >> 5
+  let one = zero * (state[2] & state[3]) ^ state[3]
+  let two  = (state[3] >> (zero % 1)) * (zero ^ one)
+  let three = (state[3] ^ (two << 1)) ^ (state[select] >> 2)
+  return [zero >> 1, one << 1, two >> 1, three << 1].map(n => n & 0xffffffff)
 }
 `, hashedLoremToPoints: `
 // This is function generates the points plotted above
@@ -72,7 +67,7 @@ function hashedLoremToPoints(){
 const Page = () => (
   <Layout metadata={metadata}>
     <div className='blog-post'>
-      <Observable content={oContent} data={oData} expose={['stringTo32BitBlocks', 'hash', 'mix', 'hashedLoremToPoints']}/>
+      <Observable content={oContent} expose={expose}/>
       <BlogNav metadata={metadata} />
     </div>
   </Layout>
