@@ -1,28 +1,28 @@
 ## 5 Crucial Vim Plugins
-Vim is an incredibly powerful lightweight text editor. However, Vim's features lack some of the usability features most programmers have grown accustomed to using. A good modern text editor should have a plugin manager, a tab completion engine, a thoughtful file system navigator, simple commenting shortcuts, and git integration.
+Vim is an incredibly powerful light-weight text editor. However, Vim's features lack some of the usability features most programmers have grown accustomed to using. A good modern text editor will have a plugin manager, a tab completion engine, a thoughtful file system navigator, simple commenting shortcuts, and git integration. Heres five plugins that will unlock those functionalities for Vim. 
 
 ### 1) Plugin Manager  [Vim-Plug](https://github.com/junegunn/vim-plug) 
-Installing plugins can be done manually, but why waste the time. The vim-plug plugin manager is easy to setup and configure configure, and works with both Vim and NeoVim. From color schemes to flappy bird, vim-plug will help you manage all of your amazing plugins to suit all your hacker needs. 
+Installing plugins can be done manually, but why waste the time. The vim-plug plugin manager is easy to setup and configure. From color-schemes to flappy bird, vim-plug will help you manage all of the plugins to suit your hacker needs. 
 
-### 2) Tab completion engine  [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) 
-I'm very dyslexic and heavy depend on tab-completion. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) has been my tab completion engine of choice for years. One bonus feature is that it even does file system completion!
+### 2) Tab Completion Engine  [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) 
+I'm very dyslexic and heavy depend on tab-completion. YouCompleteMe has been my tab completion engine of choice for many years. One bonus feature I like is that it even does file system completion!
 
-### 3) File system navigation [NERD tree](https://github.com/scrooloose/nerdtree) 
-Atom, sublime text, and VSCode all have a similar file system navigation bars that allows you to quickly navigate the contents of your project. [NERD tree](https://github.com/scrooloose/nerdtree) is simple side pane that allows you to quickly navigate directories and open files to read and edit.  
+### 3) File System Navigation [NERD tree](https://github.com/scrooloose/nerdtree) 
+Atom, SublimeText, and VSCode all have a similar file system navigation panes for navigating the contents of your project. NERD-tree is simple side pane that allows you to quickly navigate directories and open files to read and edit.  
 
 ### 4) Comment Toggling [NERD Commenter](https://github.com/scrooloose/nerdcommenter) 
-When I'm writing and debugging code I often like to select a block of text and toggle commenting it out. [NERD Commenter](https://github.com/scrooloose/nerdcommenter) is an easy-peasy comment plugin that will do the trick no matter what language you are using.
+When I'm writing and debugging code I often like to select a block of text and toggle commenting it out. NERD-Commenter is an easy-peasy comment plugin that will do the trick no matter what language you are using.
 
 ### 5) Git Integration  [Fugitive.Vim](https://github.com/tpope/vim-fugitive)
-[Fugitive.Vim](https://github.com/tpope/vim-fugitive) is not exaggerating when it claims to be the best git wrapper of all time. Fugitive's genius is the way it enables your to intuitively unlock git's power to time-travel. One example of this is how Fugitive can split your code into two panes with a diff to your unstated changes or another branch. I can't tell you how many times this has helped me through stick situations.
+Fugitive.Vim is not exaggerating when it claims to be the best git wrapper of all time. Fugitive's genius is the way it enables your to intuitively unlock git's power to time-travel. One example of this is how Fugitive can split your code into two panes, allowing you to visually diff to versions of history. I can't tell you how many times this has helped me through sticky situations.
 
 ## 5 Bonus Plugins 
-* [Vim Colorschemes](https://github.com/flazz/vim-colorschemes) - hundreds of Vim color schemes.
-* [Vim FZF](https://github.com/junegunn/fzf.vim) - fuzzy search for Vim.
-* [Vim Ale](https://github.com/dense-analysis/ale) - linter output in your Vim gutter.
-* [Vim Git-Gutter](https://github.com/airblade/vim-gitgutter) - a git diff in your Vim gutter
-* [Vim Surround](https://github.com/tpope/vim-surround) - surround selected code with anything.
+* [Vim Colorschemes](https://github.com/flazz/vim-colorschemes) - Hundreds of Vim color schemes, including mine *yuijiu* :)
+* [Vim FZF](https://github.com/junegunn/fzf.vim) - Fuzzy search for Vim.
+* [Vim Ale](https://github.com/dense-analysis/ale) - Linter output in your Vim gutter.
+* [Vim Git-Gutter](https://github.com/airblade/vim-gitgutter) - A git diff in your Vim gutter
+* [Vim Surround](https://github.com/tpope/vim-surround) - Surround selected code with anything.
 
 ## Extra Resources
 * [Vim Awesome](https://vimawesome.com/) is a great resource for browsing Vim plugins.
-* [Learn Vim Script The Hard Way](http://learnvimscriptthehardway.stevelosh.com/) is a online book that teaches you how to write your own Vim plugins.
+* [Learn Vim Script The Hard Way](http://learnvimscriptthehardway.stevelosh.com/) is an online book that teaches you how to write your own Vim plugins.
