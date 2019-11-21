@@ -42,9 +42,10 @@
     
     .site-title {
       display: block;
+      padding-top: .6rem;
       float: left;
       margin-left: $pad;
-      transform: translateY(calc(60% - 0.5em));
+      transform: translateY(calc(60% - 0.5rem));
       z-index: 999;
       text-align: center;
 
@@ -107,14 +108,14 @@
       li {
         display: inline-block;
         width: 100%;
-        height: 2em;
+        height: 2rem;
         background: $dye_white;
         &:hover { background: $shade_lightish; }
         &:active { background: $shade_medium; }
         a {
           width: 100%;
           height: 100%;
-          padding-top: 0.5em;
+          padding-top: 0.5rem;
           text-align: center;
         }
       }
@@ -174,7 +175,7 @@
         li {
           position: relative;
           width: 100%;
-          height: 2em;
+          height: 2rem;
           margin: 0;
           background: $dye_white;
           &:hover { background: $shade_lightish } 
@@ -185,23 +186,23 @@
             text-decoration: none;
             position: absolute;
             height: 100%;
-            padding-top: .5em;
-            padding-right: .5em;;
+            padding-top: .5rem;
+            padding-right: .5rem;;
             right: 0;
             text-align: right;
           }
         }
         li:nth-child(2) a {
-          padding-right: 1em;
+          padding-right: 1rem;
         }
         li:nth-child(3) a {
-          padding-right: 1.5em;
+          padding-right: 1.5rem;
         }
         li:nth-child(4) a {
-          padding-right: 1em;
+          padding-right: 1rem;
         }
         li:nth-child(6) a {
-          padding-right: 1.5em;
+          padding-right: 1.5rem;
         }
 
       }
@@ -258,7 +259,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            padding-top: 0.25em;
+            padding-top: 0.25rem;
             text-align: center;
             text-decoration: none;
           }

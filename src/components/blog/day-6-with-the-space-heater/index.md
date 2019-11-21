@@ -1,11 +1,13 @@
-# Day 6 with the space heater.  
+# Needy for Speedy, Javascript Edition
+> aka. Day 6 with the space heater    
 
-## 今天 I improved on a very sloppy gist from 昨天  
-
-While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures) _lul basically none are implemented at the time of this post_ I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had big red warnings about the negative impacts from fussing around with Object prototypes. There are so many ways to make an Object, and my experiments had only been syntactic asthetics. I was playing around with formatting, syntax, feel, and readability (arguably all subjective). These MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
+Howdy y'all, it's been a cold weak but at least my toes are warm. This here's a deep dive into the runtime speeds of javascript's different object creation methods.
+ 
+## I improved on a very sloppy gist from yesterday
+While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures). ~~lul basically none are implemented at the time of this post~~. I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had many big red warnings about the negative impacts from fussing around with Object prototypes. I also found there are so many ways to make an Object. I had previously been playing around with formatting, syntax, feel, and readability (arguably all subjective), when these MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
   
 ## a little note 
-To test the speed of different Object instantiation techniques, I modeled the following little note, and then implemented it a bunch of different ways. Some of the implementations varied due to what I've been calling "coding style", but they all at least implemented this data and behavior.     
+To test the speed of different Object instantiation techniques, I modeled the following little note, and then implemented it a bunch of different ways. Some of the implementations varied due to what I've been calling "coding style", but they at least implemented the following data and behavior.     
 ```   
 // NOTE
 {
@@ -26,36 +28,6 @@ isNote = (note) -> !!note.isNote
 ``` 
   
   
-## tick tock  
-After mocking up the lil note model, I made a function `testSpeed` for testing the speed of a synchronous javascript function. `testSpeed` has the following args.    
-* `cb` - a function who's speed gunna' be test
-* `iterations` - the number of times `cb` should get executed per **run**
-    * defaulting to `1048576` -- just an arbitrary large number
-* `runs` - the number of times you want to collect how many milliseconds elapsed while executing `cb` `iterations` times.    
-    * defaulting to `10`   
-``` js 
-let testSpeed = ({cb, runs=10, iterations=Math.pow(2, 20)}) => {
-  let state = {
-    runs,
-    iterations,
-    results: []
-  }
-  for (var t =0; t < runs; t++){
-    let startTime = performance.now()
-    for(var i = 0; i < iterations; i++){
-      cb()
-    }
-    state.results.push(performance.now() - startTime)
-  }
-  state.min = state.results.reduce((r, n) => Math.min(r, n))
-  state.max = state.results.reduce((r, n) => Math.max(r, n))
-  state.diference = state.max - state.min
-  state.totalTime = state.results.reduce((r, n) => r + n) 
-  state.average = state.totalTime / 10
-  return state
-}
-```
-
 ## ALL THEM BEANS  
 OOP should be pronounced OOP  
 
@@ -152,7 +124,7 @@ let testNoteFactory = () => {
 }
 ```
 
-## FP比較最好的
+## FP -> FP 
 ### FUNCTIONAL (MULTIPLE ARITY)
 **Note:** I think functional programming (FP) is better for modeling behavior that works with data, not modeling data it self. Unless, like an abstract data type, the model is a behavior model. These notes are really just data with dinky behavior, If I was building a notes app using FP. The data would only be data and not reference any of its behaviors(methods), like some of the following implementations do. 
   
@@ -348,6 +320,36 @@ let testNoteSetPrototypeOf = () => {
 }
 ```
 ## YOU ARE BEAUTIFUL JUST THE WAY YOU ARE
+### tick tock  
+After hashing out all the Object creation implementations, I made a function `testSpeed` for testing the speed of a synchronous javascript function. `testSpeed` has the following args.    
+* `cb` - a function who's speed gunna' be test
+* `iterations` - the number of times `cb` should get executed per **run**
+    * defaulting to `1048576` -- just an arbitrary large number
+* `runs` - the number of times you want to collect how many milliseconds elapsed while executing `cb` `iterations` times.    
+    * defaulting to `10`   
+``` js 
+let testSpeed = ({cb, runs=10, iterations=Math.pow(2, 20)}) => {
+  let state = {
+    runs,
+    iterations,
+    results: []
+  }
+  for (var t =0; t < runs; t++){
+    let startTime = performance.now()
+    for(var i = 0; i < iterations; i++){
+      cb()
+    }
+    state.results.push(performance.now() - startTime)
+  }
+  state.min = state.results.reduce((r, n) => Math.min(r, n))
+  state.max = state.results.reduce((r, n) => Math.max(r, n))
+  state.diference = state.max - state.min
+  state.totalTime = state.results.reduce((r, n) => r + n) 
+  state.average = state.totalTime / 10
+  return state
+}
+```
+
 ### RUNNIN RUNNIN RUNNIN (that song, ya know?)    
 This lil doodie runs each function through `speedTest` and aggregates the results, then it returns an array of those results sorted by the average ms elapsed.   
 ``` js
@@ -390,14 +392,13 @@ It takes me longer to do a write up than to write the code.
 
 And ...   
 
-1. Classic constructors are really fast. 
-2. Classes and Factories are essential equivalent, but they're both super fast so use em' all day. 
-3. Functional versions are lil' a bit slower, but unless you have crazy need for speedy optimization hax, go ahead and use em all day. 
-    * also the closure method versions would have Memory considerations
+1. Classic constructors are really really fast. 
+2. Classes and Factories are essentialy equivalent, but they're both super fast so use em' all day. 
+3. Functional versions are lil' a bit slower, but unless you have crazy needy for speedy optimization hax, go ahead and use em all day. 
+    * also the closure implementations have memory considerations
 4. USE `Object.freeze` with caution, It's an amazing tool and you should use it but If you're regularly doing something Millions of times it can have a substantial impact. So Use it with caution all day.   
 5. `Object.create` and `Object.setPrototypeOf` are DEFINITELY not supposed to be used this way! They are also amazing tools, but they should be used with much consideration. For example `Object.create` can be used to create classic inheritance (I'm not really a fan of inheritance but wat-evz), where `Object.create` is called once per type of model and then never again. As opposed to Once per instantiation of a model.   
 6. Write code for fun!
-
 
 <3 Slug. 
 

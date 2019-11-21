@@ -1,7 +1,7 @@
 {
   "url": "/blog/wut-abstract-data-type-huh",
   "title": "Wut, Abstract Data Type, Huh?",
-  "description": "Learn to understand and design abstract data types!",
+  "description": "This article is an attempt to explain the meaning of Abstract Data Type (ADT) in a no-undefined-jargon no-nonsense way!",
   "keywords": [ 
     "programming", "abstract-data-type", "ADT", "function", "tutorial", "wut", "huh"
 	],

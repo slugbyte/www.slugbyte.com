@@ -1,9 +1,9 @@
 {
-  "url": "/blog/day-6-with-the-space-heater",
-  "title": "Day 6 with the space heater ",
-  "description": "A deep dive into javascript's object creation methods and each thier runtime speeds.",
+  "url": "/blog/needy-for-speedy",
+  "title": "Needy for Speedy Javascript",
+  "description": "A deep dive into runtime speeds of javascript's different object creation methods.",
   "keywords": [
-    "javascript","functional+programming","oop","programing","fp"
+"javascript","functional+programming","oop","programing","fp"
   ],
   "imageUrl": "",
   "published": true,

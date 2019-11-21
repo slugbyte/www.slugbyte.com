@@ -10,17 +10,18 @@
   }
 
   .info {
-    padding: .5em;
+    padding: .5rem;
     background: white ;
   }
 
   h2, h3, p, a{
-    margin-left: 1em;
     text-align: center;
+    width: 100%;
   }
 
   h2, h3 {
     margin-top: $pad;
+    line-height: 1.5rem;
   }
 }
 
@@ -31,12 +32,12 @@
     img {
       width: 50%;
       height: 50vw;
-      transform: translateX(5em);
+      transform: translateX(5rem);
     }
 
     .info {
       position: absolute;
-      left: 2em;
+      left: 2rem;
       top: 80px;
       //background: yellow;
       float: left;
