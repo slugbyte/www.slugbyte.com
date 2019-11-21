@@ -19,7 +19,7 @@ module.exports = (options={}) => {
   return [
     loadPostData('./wut-hash-function-huh', buildMode),
     loadPostData('./for-the-lulz', buildMode),
-    loadPostData('./5-crutial-vim-plugins', buildMode),
+    loadPostData('./5-crucial-vim-plugins', buildMode),
     loadPostData('./wut-abstract-data-type-huh', buildMode),
     loadPostData('./day-6-with-the-space-heater', buildMode),
   ]

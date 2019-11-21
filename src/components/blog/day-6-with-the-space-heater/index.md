@@ -1,20 +1,8 @@
 # Day 6 with the space heater.  
 
-最後我家裡很舒服，可以再玩. 
-
-(Skip to the next headding for #dev-diaries you don't want read #me-diaries)
-
-Until recently I have been on an accidental haiatus from writing code for my self for about a year. No regrets here, life just got complicated and I had to focus my attention elsewhere. I had been peddling div tags part time, but due to the life things my head wasn't in it and I wasn't having fun, BUT FOR ME CODING ISSSS FUNNN! I think probbly even the FUNERISTEST. It always was before and now it is again, whoot.  
-  
-The good news is I have so many new curiosities, and I'm really excited about finding ways to write me-code that will be fun and useful for more that me-peeps. For the near future my biggest intention is to slam my fingers on the keyboard to get my chops back, but I plan on doing a better job of documenting my processes, writing better docs and commit messages, and maybe even capture some video tutorials. My 真的 future plans are to dig in to some open-source projects and contribute! :)   
-
-Since I've been back on the ol' keyboard again, things have exploded both in my filesystem and my mind. Not in a bad way. In a chasing every little curiosity way. Ive started working on new site, I've been using, implementing abstract data structures to playing around with some different coding styles, and I have this other project Ive been working on for doing remote procedure calls([RPC](https://en.wikipedia.org/wiki/Remote_procedure_call)). I'm calling the RPC proeject slugnetbot, and researching for it is how I happened upon [scuttlebot](https://www.scuttlebutt.nz/). I've only been looking through it for a few days, but Im totally blow away by this project and very excited to keep reading through the code.  
-
-> scuttlebot is not a radom word here, its a p2p social media network that I orignaly made this writeup for :)
-
 ## 今天 I improved on a very sloppy gist from 昨天  
 
-While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures) _lul basically none are implemented at the time of this post_ I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had big red warnings about the negative impacts from fussing around with Object prototypes. There are so many ways to make an Object, and my experiments had only been aesthetic. I was playing around with formatting, syntax, feel, and readability (arguably all subjective). These MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
+While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures) _lul basically none are implemented at the time of this post_ I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had big red warnings about the negative impacts from fussing around with Object prototypes. There are so many ways to make an Object, and my experiments had only been syntactic asthetics. I was playing around with formatting, syntax, feel, and readability (arguably all subjective). These MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
   
 ## a little note 
 To test the speed of different Object instantiation techniques, I modeled the following little note, and then implemented it a bunch of different ways. Some of the implementations varied due to what I've been calling "coding style", but they all at least implemented this data and behavior.     
@@ -72,7 +60,7 @@ let testSpeed = ({cb, runs=10, iterations=Math.pow(2, 20)}) => {
 OOP should be pronounced OOP  
 
 ###  CLASSIC CONSTRUCTOR     
-SO, this is the classic constructor, Nothing to fancy. No deviation from the mocked up model above. But, Below you will find the `testNoteConstructor` function. Notice this function is not really a test, because its not asserting anything about the Note. Its just a function that uses every feature of the note. This function will be used by `timeTest` as the `cb` arg, so that we can time how long it takes to instantiate 1048576 `NoteConstructor` notes and execute their methods.   
+SO, this is the classic constructor, Nothing to fancy. No deviation from the mocked up model above. But, Below you will find the `testNoteConstructor` function. Notice this function is not really a test, because it's not asserting anything about the Note. It's just a function that uses every feature of the note. This function will be used by `timeTest` as the `cb` arg, so that we can time how long it takes to instantiate 1048576 `NoteConstructor` notes and execute their methods.   
 ```   js
 function NoteConstructor(type, value){
     this.type = type
@@ -191,7 +179,7 @@ let testNoteFunctional = () => {
 ```
 
 ### FUNCTIONAL (CURRIED)   
-This is very similar to the `NoteFunctional`  implementation, but its using curried functions. Currying is amazing, and if you haven't given it a shot YOU SHOULD RIGHT NOW! Below are some great JS curry related resources.  
+This is very similar to the `NoteFunctional`  implementation, but it's using curried functions. Currying is amazing, and if you haven't given it a shot YOU SHOULD RIGHT NOW! Below are some great JS curry related resources.  
 
   * [Funfunfunction's steller curry video](https://www.youtube.com/watch?v=iZLP4qOwY8I)
   * [Getify on function composition](https://github.com/getify/Functional-Light-JS/blob/13a3bdafb4edb83207db76212312472aab20d06a/manuscript/ch4.md)  
@@ -242,7 +230,7 @@ let testNoteFunctionalFreeze = () => {
 ### FUNCTIONAL-ISH (CURRIED BUT WITH MUTATION)  
 Functional coding is my favz, but usually I don't use it to model OOP, for the [lulz](https://en.wiktionary.org/wiki/for_the_lulz) I did it anyways.       
     
-JS often has OOP implementations of objects that sometimes have functional-esq methods for example `array.map(cb)`. But this here... is the opposite, its using the powers of closure to make a function return a oop like object without the use of the `new` keyword. AKA. THIS ONE IS WACK, and its got readability issues... for example I felt the need to write comments in the code in order to explain complexities. Basically I feel like this one is not a good choice even if its fast, but it might be fun for you to read through anyways.   
+JS often has OOP implementations of objects that sometimes have functional-esq methods for example `array.map(cb)`. But this here... is the opposite, it's using the powers of closure to make a function return a OOP like object without the use of the `new` keyword. AKA. THIS ONE IS WACK, and its got readability issues... for example I felt the need to write comments in the code in order to explain complexities. Basically I feel like this one is not a good choice even if its fast, but it might be fun for you to read through anyways.   
 ``` js
 let describeNoteFunctionalish =  (note) => () => note.type + ': ' + note.value
 
@@ -326,7 +314,7 @@ let testNoteObjectCreate = () => {
 ```
 
 ### Object.setPrototypeOf   
-THE LAST IMPLEMENTATOIN, PHIEAW!  
+THE LAST IMPLEMENTATION, PHIEAW!  
   
 This one is also similar to the first three, and MDN also points to `Object.setPrototypeOf()` as a good way to set an objects prototype. ALSO SPOILER ALERT ITS HELLLLZA SLOOOOOOWW!   
 ``` js
@@ -361,7 +349,7 @@ let testNoteSetPrototypeOf = () => {
 ```
 ## YOU ARE BEAUTIFUL JUST THE WAY YOU ARE
 ### RUNNIN RUNNIN RUNNIN (that song, ya know?)    
-This lil doodie runs each function through `speedTest` and aggrigates the results, then it returns an array of those results sorted by the average ms elapsed.   
+This lil doodie runs each function through `speedTest` and aggregates the results, then it returns an array of those results sorted by the average ms elapsed.   
 ``` js
 let runTest = () => {
   return [
@@ -403,11 +391,11 @@ It takes me longer to do a write up than to write the code.
 And ...   
 
 1. Classic constructors are really fast. 
-2. Classes and Factories are essential equivalent, but there both super fast so use em' all day. 
+2. Classes and Factories are essential equivalent, but they're both super fast so use em' all day. 
 3. Functional versions are lil' a bit slower, but unless you have crazy need for speedy optimization hax, go ahead and use em all day. 
     * also the closure method versions would have Memory considerations
-4. USE `Object.freeze` with caution, Its an amazing tool and you should use it but If your regularly doing something Millions of times it can have a substantial impact. So Use it with caution all day.   
-5. `Object.create` and `Object.setPrototypeOf` are DEFENITLY not supposed to be used this way! They are also amazing tools, but they should be used with much consideration. For example `Object.create` can be used to create classic inheritance (I'm not really a fan of inheritance but wat-evz), where `Object.create` is called once per type of model and then never again. As opposed to Once per instantiation of a model.   
+4. USE `Object.freeze` with caution, It's an amazing tool and you should use it but If you're regularly doing something Millions of times it can have a substantial impact. So Use it with caution all day.   
+5. `Object.create` and `Object.setPrototypeOf` are DEFINITELY not supposed to be used this way! They are also amazing tools, but they should be used with much consideration. For example `Object.create` can be used to create classic inheritance (I'm not really a fan of inheritance but wat-evz), where `Object.create` is called once per type of model and then never again. As opposed to Once per instantiation of a model.   
 6. Write code for fun!
 
 
