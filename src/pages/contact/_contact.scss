@@ -1,58 +1,71 @@
 @import '../../style/_include.scss';
 
 .contact-page {
+  padding: 1rem;
   img {
-    width: 60%;
-    height: 60vw;
+    display: block;
     margin: 0 auto;
-    margin-top: $pad;
-    background: red;
+    width: 100%;
+    height: calc(100vw - 2rem);
+    margin-bottom: 1rem;
   }
 
   .info {
-    padding: .5rem;
-    background: white ;
-  }
+    h2 {
+      color: $shade_light;
+      background: $shade_black;
+      padding: .5rem;
+      @include font_size(2.5rem); 
+      text-align: right;
+    }
+    h3 {
+      text-align: right;
+      @include font_size(2rem);
+    } 
+    p, a {
+      padding: .5rem;
+      text-align: right;
+      width: 100%;
+      @include font_size(1.5rem);
+    }
 
-  h2, h3, p, a{
-    text-align: center;
-    width: 100%;
-  }
-
-  h2, h3 {
-    margin-top: $pad;
-    line-height: 1.5rem;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
 @include tablet_styles {
   .contact-page {
-    position: relative;
-    padding-top: $pad;
+    clear: both;
+
     img {
-      width: 50%;
-      height: 50vw;
-      transform: translateX(5rem);
+      width: 45vw;
+      height: calc(50vw);
+      float: left;
     }
 
     .info {
-      position: absolute;
-      left: 2rem;
-      top: 80px;
-      //background: yellow;
+      width: 50vw;
       float: left;
-      h2, h3, p, a {
-        text-align: right;
-      }
     }
   }
 }
 
 @include desktop_styles {
   .contact-page {
+    padding: 0;
+    padding-top: .5rem;
+    width: 100%;
     img {
-      width: calc(980px /2);
-      height: calc(980px /2);
+      width: calc((980px * .5));
+      height: calc((980px * .5));
+      float: left;
+    }
+
+    .info {
+      width: calc((980px * .5));
+      float: right;
     }
   }
 }
