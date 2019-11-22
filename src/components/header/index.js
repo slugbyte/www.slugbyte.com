@@ -5,7 +5,7 @@ import React from 'react'
 import {Link} from 'gatsby'
 
 import Hamburger from '../hamburger'
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className='site-header'>
     <main>
       <div className='site-logo'>

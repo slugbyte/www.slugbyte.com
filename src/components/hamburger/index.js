@@ -9,6 +9,10 @@ class Hamburger extends React.Component {
     }
   }
 
+  componentDidMount = () => {
+    // TODO find a way to close when click out of header
+  }
+
   toggleHamburger = () => {
     this.setState(state => ({
       open: !state.open,

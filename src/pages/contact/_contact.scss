@@ -1,4 +1,4 @@
-@import '../../style/_var.scss';
+@import '../../style/_include.scss';
 
 .contact-page {
   img {
@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (min-width: $break_tablet){
+@include tablet_styles {
   .contact-page {
     position: relative;
     padding-top: $pad;

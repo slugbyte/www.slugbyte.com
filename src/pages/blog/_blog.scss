@@ -1,7 +1,12 @@
-@import '../../style/_var.scss';
+@import '../../style/_include.scss';
 
 .blog-page {
   padding: 0 $pad ;
+
+  a {
+    text-decoration: underline;
+  }
+
   .blog-container {
     width: 100%;
     .blog-post-item {
@@ -14,9 +19,9 @@
       }
       h2 {
         margin-top: $pad;
-        background: $dye_black;
+        background: $shade_black;
         padding: $pad;
-        color: $dye_white;
+        color: $shade_white;
       }
       p {
         margin-top: $pad;

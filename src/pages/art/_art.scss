@@ -1,4 +1,4 @@
-@import '../../style/_var.scss';
+@import '../../style/_include.scss';
 
 .art-page {
   .art-container {
@@ -13,7 +13,7 @@
   }
 }
 
-@media screen and (min-width: $break_tablet){
+@include tablet_styles {
   .art-page {
     .art-container {
       .art {
@@ -29,7 +29,7 @@
   }
 }
 
-@media screen and (min-width: $break_desktop){
+@include desktop_styles {
   .art-page {
     .art-container {
       //$ticky_pad: 1em / 3;

@@ -1,7 +1,7 @@
 {
   "url": "/blog/needy-for-speedy",
   "title": "Needy for Speedy Javascript",
-  "description": "A deep dive into runtime speeds of javascript's different object creation methods.",
+  "description": "A deep dive into the runtime speeds of javascript's different object creation methods.",
   "keywords": [
 "javascript","functional+programming","oop","programing","fp"
   ],

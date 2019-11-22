@@ -8,10 +8,13 @@
   box-sizing: border-box;
 
   font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
   font-family: $default_font;
   vertical-align: baseline;
+  text-decoration: none;
 
-  color: $dye_black;
+  color: $shade_black;
   background: transparent;
 }
 

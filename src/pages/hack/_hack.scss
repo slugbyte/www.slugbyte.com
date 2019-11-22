@@ -1,6 +1,7 @@
-@import '../../style/_var.scss';
+@import '../../style/_include.scss';
 
 .project-page {
+  
   padding-top: $pad;
   .project-container {
     padding-left: $pad;
@@ -8,19 +9,24 @@
     width: 100%;
     .project-item {
       background: black;
-      border-top: $pad solid $dye_black;
+      border-top: $pad solid $shade_black;
+
+      a {
+        text-decoration: underline;
+      }
+
       h2, p, a {
         padding: $pad;
         line-height: 2rem;
-        color: $dye_white;
-        background: $dye_black;
+        color: $shade_white;
+        background: $shade_black;
       }
 
       h2 {
-        border-left: 0.5rem solid $dye_black;
-        border-right: 0.5rem solid $dye_black;
-        background: $dye_white;
-        color: $dye_black;
+        border-left: 0.5rem solid $shade_black;
+        border-right: 0.5rem solid $shade_black;
+        background: $shade_white;
+        color: $shade_black;
         font-size: 1.5rem;
         padding: 0.5rem;
         text-align: right;

@@ -1,4 +1,4 @@
-import './_project.scss' 
+import './_hack.scss' 
 
 import React from 'react'
 import { Link } from 'gatsby'
