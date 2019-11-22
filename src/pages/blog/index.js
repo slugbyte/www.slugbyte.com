@@ -25,7 +25,7 @@ const BlogPostItem = ({post}) => {
 const IndexPage = () => (
   <Layout metadata={metadata}>
     <div className='blog-page'>
-      <div className='blog-container'>
+      <div className='blog-container clearfix'>
         {postData.map((post, i) => <BlogPostItem key={i} post={post} /> ) }
       </div>
     </div>

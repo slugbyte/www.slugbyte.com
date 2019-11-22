@@ -64,7 +64,7 @@ class ArtBrowser extends React.Component {
             <p>click anywhere to close</p>
           </div>
         ) : '' }
-        <div className='art-item-container'>
+        <div className='art-item-container clearfix'>
         {artList.map((art, i) => 
            <ArtItem 
               key={i} 

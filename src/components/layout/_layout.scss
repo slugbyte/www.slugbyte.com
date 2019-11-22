@@ -3,7 +3,21 @@
 
 .site-content {
   width: 100%;
+
+  .site-main { 
+    min-height: calc(100vh - 8.5rem);
+  }
+
+  footer {
+    padding: .5rem;
+    color: $shade_lightish;
+    border-top: 2px solid $shade_light;
+  }
   z-index: -500;
+
+  .site-main {
+    padding-bottom: .5rem;
+  }
 }
 
 @include tablet_styles {
@@ -13,6 +27,8 @@
   .site-content {
     width: $break_desktop;
     margin: 0 auto;
+    .site-main {
+    }
   }
 }
 

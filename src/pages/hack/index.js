@@ -90,7 +90,7 @@ const ProjectPostItem = ({project}) => (
 const IndexPage = () => (
   <Layout >
     <div className='project-page'>
-      <div className='project-container'>
+      <div className='project-container clearfix'>
          {projects.map((project, i ) => <ProjectPostItem key={i} project={project} />)}
       </div>
     </div>

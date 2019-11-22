@@ -38,6 +38,9 @@ const Layout = (props) => {
             <main className='site-main'>
               {children}
             </main>
+            <footer>
+              &copy; Duncan Marsh 2019
+            </footer>
           </div>
         </>
       )}
