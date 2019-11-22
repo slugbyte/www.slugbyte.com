@@ -21,6 +21,6 @@ module.exports = (options={}) => {
     loadPostData('./for-the-lulz', buildMode),
     loadPostData('./5-crucial-vim-plugins', buildMode),
     loadPostData('./wut-abstract-data-type-huh', buildMode),
-    loadPostData('./day-6-with-the-space-heater', buildMode),
+    loadPostData('./needy-for-speedy', buildMode),
   ]
 }
