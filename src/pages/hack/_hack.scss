@@ -1,7 +1,6 @@
 @import '../../style/_include.scss';
 
 .project-page {
-  
   padding-top: $pad;
   .project-container {
     padding-left: $pad;
@@ -34,7 +33,7 @@
       }
 
       p {
-        height: 4rem;
+        height: 6rem;
       }
 
       a {
@@ -43,7 +42,8 @@
 
       img {
         width: 100%; 
-        height: calc(50vw - 1rem) ;
+        height: calc(50vw - 1.5rem) ;
+        transform: translateY(3px);
       }
     } 
   }
