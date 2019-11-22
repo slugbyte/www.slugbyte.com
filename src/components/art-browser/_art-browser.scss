@@ -10,9 +10,11 @@
     padding-left: 0.25em;
     padding-right: 0.25em;
     width: 100%;
+    height: calc(100vw - 1rem);
     margin-bottom: $pad;
     img {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -24,6 +26,8 @@
     background: white;
     width: 100vw; 
     height: 100vh; 
+    padding-top: 3rem;
+
     .art-item {
       margin: 0;
       padding: 1em;
@@ -41,12 +45,14 @@
   .art-browser {
     .art-item {
       width: 50%;
+      height: calc(50vw - .75rem);
       float: left;
       user-select: none;
     }
 
     .big {
       width: 100%;
+      height: calc(100vw - 1rem);
     }
 
     .is-right {
@@ -71,14 +77,17 @@
     margin: 0 auto;
     .art-item {
       width: calc(100%/3);
+      height: calc((980px/3) - (1rem/3));
     }
     .big {
       width: calc(100% * (2/3));
+      height: calc((980px * 2/3) - .19rem);
     }
     .art-item-container {
       transform: translateX(-.5em);
       z-index: -100;
     }
+
     .selected {
       position: fixed !important;
       float: none;
@@ -95,6 +104,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 700px !important;
+        height: 700px !important;
         margin: 0 auto;
       }
 
