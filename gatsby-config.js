@@ -1,17 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: 'slugbyte.com',
+    siteUrl: 'https://www.slugbyte.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    //{
-      //resolve: `gatsby-source-filesystem`,
-      //options: {
-        //name: `images`,
-        //path: `${__dirname}/src/images`,
-      //},
-    //},
+    `gatsby-plugin-sitemap`,
+		{
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.slugbyte.com',
+        sitemap: 'https://www.example.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
