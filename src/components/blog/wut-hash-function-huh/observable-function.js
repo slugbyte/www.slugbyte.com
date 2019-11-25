@@ -7,8 +7,8 @@ export default function define(runtime, observer) {
   main.variable(observer()).define(["md"], function(md){return(
 md`# Wut, Hash Functions, Huh?
 
-Hash funcions can be thought of as Pseudo Random Number Generators that use generic data as seeds.
-It is generally considered very difficult to generalize hash function algorithems because input can very so greatly. Hash functions have many uses including...
+Hash functions can be thought of as Pseudo-Random Number Generators that use generic data as seeds.
+It is generally considered very difficult to generalize hash function algorithms because the input can vary so greatly. Hash functions have many uses including...
 
 * [Verifying data integrity](https://en.wikipedia.org/wiki/File_verification)
 * [Signature generation and verification](https://en.wikipedia.org/wiki/Digital_signature)
@@ -16,10 +16,10 @@ It is generally considered very difficult to generalize hash function algorithem
 * [Proof-of-work](https://en.wikipedia.org/wiki/Proof-of-work_system)
 * [File or data identifier](https://en.wikipedia.org/wiki/Hash_table)
 
-In theory there can be a *perfect hash function* (PHF) for any given set of data, a PHF is a hash function that will not have any collisions. Because a PHF is so difficult to create it is common to shoot for implamenting *ideal hash functions* (IHF). The goal of an IHF is to generate the least amount of collisions possible.
+In theory, there can be a *perfect hash function* (PHF) for any given set of data, a PHF is a hash function that will not have any collisions. Because a PHF is so difficult to create it is common to shoot for implementing *ideal hash functions* (IHF). The goal of an IHF is to generate the least amount of collisions possible.
 
 
-Hash functions are meant to be fast, determinstic, and have few or no collisions. Small changes to the input should reflect to changes in the output. Common tools for implamenting hash functions are arithmetic opperators, bitwise opperators, logic, and lookup tables. These opperations are fast and can be implamented on GPUs.
+Hash functions are meant to be fast, deterministic, and have few or no collisions. Small changes to the input should reflect on changes in the output. Common tools for implementing hash functions are arithmetic operators, bitwise operators, logic, and lookup tables. These operations are fast and can be implemented on GPUs.
 
 One method for construction hash functions is known as [Merkle–Damgård construction](https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction). The following diagram is a simplified version of its steps.
 
@@ -49,14 +49,14 @@ digraph dot  {
 )});
   main.variable(observer()).define(["md"], function(md){return(
 md`## Converting strings to numbers for the mix math (&|^+-*)
-Because the hash function will use arithmatic and bitwise opearters to perform step three in the flow chart above. We need to convert the strings we are going to hash into 32bit numbers (blocks) to work with.
+Because the hash function will use arithmetic and bitwise operators to perform step three in the flow chart above. We need to convert the strings we are going to hash into 32bit numbers (blocks) to work with.
 
 Javascript strings have a \`charCodeAt\` method for converting a charicter into a one byte ascii code (integer). \`'hello world'.charCodeAt(0)\` will return the number 104 (aka hex 0x68). 104 is the ascii decimal char code for the letter 'h'.
 
-Using the left shift opperator with the binary-or operator you can combine indavidual bytes into a larger multibyte number.  
-if \`y=0xfa\` and \`z=0x23\` then \`((y<<8) | z)\` will preduce 0xfa23
+Using the left shift operator with the binary-or operator you can combine individual bytes into a larger multibyte number.  
+if \`y=0xfa\` and \`z=0x23\` then \`((y<<8) | z)\` will produce 0xfa23
 
-By combining the functions of charCodeAt, the binary-or operator, and the left shift operator we can convert every four charicters of a string into a 32 bit number. 
+By combining the functions of charCodeAt, the binary-or operator, and the left shift operator we can convert every four characters of a string into a 32-bit number. 
 `
 )});
   main.variable(observer("stringTo32BitBlocks")).define("stringTo32BitBlocks", function(){return(
@@ -91,9 +91,9 @@ md`
   main.variable(observer()).define(["md"], function(md){return(
 md`
 
-**WARNING:** This hash implamentaion is just a leaning example and should not be used in any security related applications. AKA. Don't use this for hashing passwords, data integrety assurence, or any other security matter.
+**WARNING:** This hash implementation is just a leaning example and should not be used in any security-related applications. AKA. Don't use this for hashing passwords, data integrity assurance, or any other security matter.
 
-Ok, Lets just stick to the flow chart.
+Ok, let's just stick to the flow chart.
 `
 )});
   main.variable(observer("hash")).define("hash", ["mix"], function(mix){return(
