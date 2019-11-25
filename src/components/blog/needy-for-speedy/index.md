@@ -4,10 +4,10 @@
 Howdy y'all, it's been a cold weak but at least my toes are warm. This here's a deep dive into the runtime speeds of javascript's different object creation methods.
  
 ## I improved on a very sloppy gist from yesterday
-While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures). ~~lul basically none are implemented at the time of this post~~. I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had many big red warnings about the negative impacts from fussing around with Object prototypes. I also found there are so many ways to make an Object. I had previously been playing around with formatting, syntax, feel, and readability (arguably all subjective), when these MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
+While experimenting with coding styles while working on some [Abstract Data Structures](github.com/slugbyte/data-structures). ~~lul basically none are implemented at the time of this post~~. I've been reading lots of JS docs on [MDN](https://developer.mozilla.org/en-US/). The docs I was reading had many big red warnings about the negative impacts of fussing around with Object prototypes. I also found there are so many ways to make an Object. I had previously been playing around with formatting, syntax, feel, and readability (arguably all subjective), when these MDN warnings provoked me to switch gears and write some code to test the speed of different Object instantiation techniques.   
   
 ## a little note 
-To test the speed of different Object instantiation techniques, I modeled the following little note, and then implemented it a bunch of different ways. Some of the implementations varied due to what I've been calling "coding style", but they at least implemented the following data and behavior.     
+To test the speed of different Object instantiation techniques, I modeled the following little note, and then implemented it in a bunch of different ways. Some of the implementations varied due to what I've been calling "coding style", but they at least implemented the following data and behavior.     
 ```   
 // NOTE
 {
@@ -32,7 +32,7 @@ isNote = (note) -> !!note.isNote
 OOP should be pronounced OOP  
 
 ###  CLASSIC CONSTRUCTOR     
-SO, this is the classic constructor, Nothing to fancy. No deviation from the mocked up model above. But, Below you will find the `testNoteConstructor` function. Notice this function is not really a test, because it's not asserting anything about the Note. It's just a function that uses every feature of the note. This function will be used by `timeTest` as the `cb` arg, so that we can time how long it takes to instantiate 1048576 `NoteConstructor` notes and execute their methods.   
+SO, this is the classic constructor, Nothing to fancy. No deviation from the mocked up model above. But, Below you will find the `testNoteConstructor` function. Notice this function is not a test, because it's not asserting anything about the Note. It's just a function that uses every feature of the note. This function will be used by `timeTest` as the `cb` arg so that we can time how long it takes to instantiate 1048576 `NoteConstructor` notes and execute their methods.   
 ```   js
 function NoteConstructor(type, value){
     this.type = type
@@ -67,7 +67,7 @@ let testNoteConstructor = () => {
 ```
 
 ### ES6 CLASS    
-Also Nothing fancy here, just a ES6 class. Notice here that is has its very one `testNoteClass` that does exactly the same things as `testNoteConstructor`. Each implementation has its very own `testImplementationName` function.    
+Also Nothing fancy here, just an ES6 class. Notice here that is has its very one `testNoteClass` that does the same things as `testNoteConstructor`. Each implementation has its very own `testImplementationName` function.    
 ``` js
 class NoteClass {
   constructor(type, value){
@@ -126,9 +126,9 @@ let testNoteFactory = () => {
 
 ## FP -> FP 
 ### FUNCTIONAL (MULTIPLE ARITY)
-**Note:** I think functional programming (FP) is better for modeling behavior that works with data, not modeling data it self. Unless, like an abstract data type, the model is a behavior model. These notes are really just data with dinky behavior, If I was building a notes app using FP. The data would only be data and not reference any of its behaviors(methods), like some of the following implementations do. 
+**Note:** I think functional programming (FP) is better for modeling behavior that works with data, not modeling data itself. Unless, like an abstract data type, the model is a behavior model. These notes are just data with dinky behavior, If I was building a notes app using FP. The data would only be data and not reference any of its behaviors(methods), like some of the following implementations do. 
   
-Notice that the following Note implementation is very different, because the notes have no methods! The notes are just data. The `updateValue` and `describe` have become an external functions that works with note-like objects. Also the `updateValue` equivalent does not mutate the original note, it returns a copy with an updated value. Although this implementations "methods" do not mutate the note, they do not stop mutation from happening elsewhere.   
+Notice that the following Note implementation is very different because the notes have no methods! The notes are just data. The `updateValue` and `describe` have become an external function that works with note-like objects. Also, the `updateValue` equivalent does not mutate the original note, it returns a copy with an updated value. Although this implementation's "methods" do not mutate the note, they do not stop mutation from happening elsewhere.   
  
 ``` js  
 let describeNoteFunctional = (note) =>  note.type + ': ' + note.value
@@ -200,9 +200,9 @@ let testNoteFunctionalFreeze = () => {
 ```
   
 ### FUNCTIONAL-ISH (CURRIED BUT WITH MUTATION)  
-Functional coding is my favz, but usually I don't use it to model OOP, for the [lulz](https://en.wiktionary.org/wiki/for_the_lulz) I did it anyways.       
+Functional coding is my favz, but usually, I don't use it to model OOP, for the [lulz](https://en.wiktionary.org/wiki/for_the_lulz) I did it anyway.       
     
-JS often has OOP implementations of objects that sometimes have functional-esq methods for example `array.map(cb)`. But this here... is the opposite, it's using the powers of closure to make a function return a OOP like object without the use of the `new` keyword. AKA. THIS ONE IS WACK, and its got readability issues... for example I felt the need to write comments in the code in order to explain complexities. Basically I feel like this one is not a good choice even if its fast, but it might be fun for you to read through anyways.   
+JS often has OOP implementations of objects that sometimes have functional-esq methods for example `array.map(cb)`. But this here... is the opposite, it's using the powers of closure to make a function return an OOP like object without the use of the `new` keyword. AKA. THIS ONE IS WACK, and its got readability issues... for example I felt the need to write comments in the code to explain complexities. Basically, I feel like this one is not a good choice even if it's fast, but it might be fun for you to read through anyways.   
 ``` js
 let describeNoteFunctionalish =  (note) => () => note.type + ': ' + note.value
 
@@ -244,7 +244,7 @@ let testNoteFunctionalish = () => {
 
 ## Exposing dirt about a friend kinda gossip
 ### Object.create   
-This one is much more like the first three, in that it returns an object that has prototype methods with the same behaviors. However I used `Object.create()` to bring the note to life. On MDN when prototype warnings come up usually it refers you to `Object.create()` as a good tool to use, BUT SPOILER ALERT ITS HELLLLLZA SLOW.   
+This one is much more like the first three, in that it returns an object that has prototype methods with the same behaviors. However, I used `Object.create()` to bring the note to life. On MDN when prototype warnings come up usually it refers you to `Object.create()` as a good tool to use, BUT SPOILER ALERT ITS HELLLLLZA SLOW.   
 ``` js
 function NoteObjectCreate(type, value){
   let prototype = {
@@ -288,7 +288,7 @@ let testNoteObjectCreate = () => {
 ### Object.setPrototypeOf   
 THE LAST IMPLEMENTATION, PHIEAW!  
   
-This one is also similar to the first three, and MDN also points to `Object.setPrototypeOf()` as a good way to set an objects prototype. ALSO SPOILER ALERT ITS HELLLLZA SLOOOOOOWW!   
+This one is also similar to the first three, and MDN also points to `Object.setPrototypeOf()` as a good way to set an object's prototype. ALSO, SPOILER ALERT ITS HELLLLZA SLOOOOOOWW!   
 ``` js
 function NoteSetPrototypeOf(type, value){
   let result = { type, value}
@@ -324,7 +324,7 @@ let testNoteSetPrototypeOf = () => {
 After hashing out all the Object creation implementations, I made a function `testSpeed` for testing the speed of a synchronous javascript function. `testSpeed` has the following args.    
 * `cb` - a function who's speed gunna' be test
 * `iterations` - the number of times `cb` should get executed per **run**
-    * defaulting to `1048576` -- just an arbitrary large number
+    * defaulting to `1048576` -- just an arbitrarily large number
 * `runs` - the number of times you want to collect how many milliseconds elapsed while executing `cb` `iterations` times.    
     * defaulting to `10`   
 ``` js 
@@ -393,11 +393,11 @@ It takes me longer to do a write up than to write the code.
 And ...   
 
 1. Classic constructors are really really fast. 
-2. Classes and Factories are essentialy equivalent, but they're both super fast so use em' all day. 
+2. Classes and Factories are essentially equivalent, but they're both super fast so use em' all day. 
 3. Functional versions are lil' a bit slower, but unless you have crazy needy for speedy optimization hax, go ahead and use em all day. 
     * also the closure implementations have memory considerations
 4. USE `Object.freeze` with caution, It's an amazing tool and you should use it but If you're regularly doing something Millions of times it can have a substantial impact. So Use it with caution all day.   
-5. `Object.create` and `Object.setPrototypeOf` are DEFINITELY not supposed to be used this way! They are also amazing tools, but they should be used with much consideration. For example `Object.create` can be used to create classic inheritance (I'm not really a fan of inheritance but wat-evz), where `Object.create` is called once per type of model and then never again. As opposed to Once per instantiation of a model.   
+5. `Object.create` and `Object.setPrototypeOf` are DEFINITELY not supposed to be used this way! They are also amazing tools, but they should be used with much consideration. For example, `Object.create` can be used to create classic inheritance (I'm not a fan of inheritance but wat-evz), where `Object.create` is called once per type of model and then never again. As opposed to Once per instantiation of a model.   
 6. Write code for fun!
 
 <3 Slug. 
