@@ -3,6 +3,9 @@ build:
 	rm -rf public
 	npm run build 
 
+logdate:
+	date > last-publish.txt
+
 upload:
 	aws s3 cp ./public s3://www.slugbyte.com --recursive --acl public-read
 	aws cloudfront create-invalidation --distribution-id E3H6F5GZGHD9YL --paths "/*"
@@ -12,6 +15,6 @@ nuke:
 
 reset: build nuke upload
 
-publish: build upload
+publish: build upload logdate
 
 
