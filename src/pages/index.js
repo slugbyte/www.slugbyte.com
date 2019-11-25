@@ -6,17 +6,9 @@ import Layout from '../components/layout'
 import LazyImage from '../components/lazy-image'
 import AudioPlayer from '../components/audio-player'
 
-const metadata = {
-  title: 'slugbyte.com',
-  description: 'The Art, Programming, and Music Blog slugbyte. WutWut?',
-  keywords: [ 
-    'art', 'illustration', 'programming', 'music'
-    , 'audio', 'noise', 'blog', 'tutorial', 'computer-science',
-  ],
-}
+const metadata = require('./metadata.json')
 
 const featuredTuneURI = require('../asset/tune/Untitled-06.wav')
-
 let head = {
   description: 'Stetch head',
   url: require('../asset/image/landing/1000/streach-head-1000.png'),

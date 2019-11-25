@@ -8,8 +8,10 @@ import Layout from '../../components/layout'
 import headShot from './head-shot-500.png'
 import headShotThumb from './head-shot-50.png'
 
+const metadata = require('./metadata.json')
+
 const IndexPage = () => (
-  <Layout >
+  <Layout metadata={metadata}>
     <div className='contact-page'>
       <LazyImage image={{
         description: 'Duncan Marsh',

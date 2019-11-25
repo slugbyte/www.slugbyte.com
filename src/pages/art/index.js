@@ -6,9 +6,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from '../../components/layout'
 import ArtBrowser from '../../components/art-browser'
 
+const metadata = require('./metadata.json')
+
 const IndexPage = () => {
   return (
-    <Layout >
+    <Layout metadata={metadata}>
       <div className='art-page'>
         <ArtBrowser />
       </div>
@@ -17,26 +19,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-//export const query = graphql`
-  //query ArtImageQuery {
-    //allFile(filter: { sourceInstanceName: { eq: "art" } }) {
-        //edges {
-          //node {
-            //publicURL
-            //extension
-          //}
-        //}
-      //}    
-  //}
-
-//`
-
-
-    //<div className='art-page'>
-      //<div className='art-container'>
-        //{publicPaths.map((path, i) => ( 
-          //<img key={i} className={'art ' + (i === 3 ? 'focused' : '')} src={path}/>
-        //))}
-      //</div>
-  //</div>

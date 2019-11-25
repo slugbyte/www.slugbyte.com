@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
 
+const metadata = require('./metadata.json')
+
 let projects = [
   {
     name: 'toy', 
@@ -72,7 +74,7 @@ let projects = [
   },
 ]
 
-const ProjectPostItem = ({project}) => (
+const HackItem = ({project}) => (
   <div className='project-item'>
     <h2>{project.name}</h2>
     <p> {project.description}</p>
@@ -88,10 +90,10 @@ const ProjectPostItem = ({project}) => (
 )
 
 const IndexPage = () => (
-  <Layout >
+  <Layout metadata={metadata}>
     <div className='project-page'>
       <div className='project-container clearfix'>
-         {projects.map((project, i ) => <ProjectPostItem key={i} project={project} />)}
+         {projects.map((project, i ) => <HackItem key={i} project={project} />)}
       </div>
     </div>
   </Layout>

@@ -9,10 +9,12 @@ import Layout from '../../components/layout'
 import AudioPlayer from '../../components/audio-player'
 import squigles from './U-250.png'
 
+import metadata from './metadata.json'
+
 const IndexPage = ({data}) => {
   let tunes = data.allFile.edges.map(e => e.node)
   return (
-  <Layout >
+  <Layout metadata={metadata}>
     <div className='audio-page'>
       <header>
         <img className='squigles' src={squigles} />
