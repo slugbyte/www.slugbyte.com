@@ -54,7 +54,7 @@ class Landing extends React.Component {
 
           <section className='feature blog-feature for-the-lulz'> 
             <h2>For the Lulz</h2>
-            <p>The power of taking good breaks to keep your focus + a hand full of command line games and tools to help you.</p>
+            <p>The power of taking good breaks to keep your focus + a hand full of command-line games and tools to help you.</p>
             <Link to='/blog/for-the-lulz'> Read Post </Link>
           </section>
 
@@ -77,7 +77,7 @@ class Landing extends React.Component {
 
           <section className='feature blog-feature crucial-vim-plugins'> 
             <h2>5 Crucial Vim Plugins</h2>
-            <p>Five Vim plugins that will unlock powerful mondern text editor functionalities.</p>
+            <p>Five Vim plugins that will unlock powerful modern text editor functionalities.</p>
             <Link to='/blog/5-crucial-vim-plugins'> Read Post </Link>
           </section>
 
@@ -90,7 +90,7 @@ class Landing extends React.Component {
 
           <section className='feature blog-feature abstract-data-type'> 
             <h2>Wut, Abstrat Data Type, Huh?</h2>
-            <p>Breaing down the meaning of Abstract Data Type in a no-undefined-jargon no-nonsense way! </p>
+            <p>Breaking down the meaning of Abstract Data Type in a no-undefined-jargon no-nonsense way!</p>
             <Link to='/blog/wut-abstract-data-type-huh'> Read Post </Link>
           </section>
       
