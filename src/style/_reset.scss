@@ -1,37 +1,79 @@
 @import './_var.scss';
 
 * {
-  display: block;
   margin: 0 ;
   padding: 0;
-  font-size: 16px;
-  font-family: sans-serif;
-  font-style: normal;
-  color: $dye_black;
-  line-height: 1em;
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
   box-sizing: border-box;
-}
 
-head, script, link {
-  display: none;
-}
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: $default_font;
+  vertical-align: baseline;
+  text-decoration: none;
 
-html {
-  height: 100vw;
+  color: $shade_black;
+  background: transparent;
 }
 
 html, body {
   width: 100%;
-  //height: auto;
-  //margin-top: $header_height;
-
-  //height: 100%;
+  font-size: 1rem;
+  line-height: 1rem; 
 }
 
-span  {
+head, script, link, style, title, meta  {
+  display: none;
+}
+
+address, article, aside, blockquote, details,
+dialog, dd, div, dl, dt, fieldset, figcaption, figure,
+footer, form, h1, h2, h3, h4, h5, h6, header, hgroup,
+hr, main, nav, ol, p, pre, section, table, ul {
+  display: block;
+}
+
+abbr, acronym, b, bdi, bdo, big, br, cite, data, 
+datalist, del, dfn, em, embed, i, iframe, img, ins, 
+kbd, map, mark, meter, noscript, object, output, 
+picture, progress, q, ruby, s, samp, slot, 
+small, strong, sub, sup, template, u, tt, var, wbr { 
+  display: inline;
+}
+
+span, a, audio, button, canvas, code, input, label, 
+select, svg, video, textarea, time {
   display: inline-block;
 }
 
+li {
+  display: list-item block;
+}
 
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+  content:'';
+  content:none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

@@ -16,10 +16,10 @@ function AudioMock(){
 const Audio = typeof window === 'undefined' ? AudioMock : window.Audio
 
 let minuteFormat = (seconds) => {
-  let minutes = Math.floor(seconds / 60)
-  seconds = Math.floor(seconds % 60)
+  let minutes = Math.floor(seconds / 60) | '0'
+  seconds = Math.floor(seconds % 60) | '0'
   if (seconds < 10 ) 
-    seconds = '0' + seconds
+    seconds = '0' + seconds 
   return minutes + ':' + seconds
 }
 

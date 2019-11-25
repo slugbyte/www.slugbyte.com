@@ -1,249 +1,130 @@
-@import '../style/_var.scss';
+@import '../style/_include.scss';
 
-// TODO make wide screen look lit 
+.landing { 
+  padding: .5rem;
 
-.landing {
-  h2, p, a {
-    font-family: $default_font;;
+  .for-the-lulz, .head, .needy-for-speedy, 
+  .tune, .art {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
-  margin-top: $pad;
-  .bio {
-    position: relative;
-    //width: 200%;
-    //margin-left: -50%;
-    width: 100%;
-    height: 350px;
-    background: $dye_lightish;
-    background: url('../asset/image/landing/flowers.png') center ;
-    background-attachment: fixed;
-    background-position: 0 160px;
-    background-size: 600px ;
-    padding: 1em;
+
+  .for-the-lulz { margin-top: 0; }
+
+  .blog-feature  {
+    h2, p, a {
+      margin-bottom: .5rem;
+    }
 
     h2 {
-      display: inline-block;
       color: $shade_white;
-      text-align: right;
-      padding: 0.25em;
-      background: $dye_black;
-      font-size: 3em;
+      background: $shade_black;
+      @include font-size(2.5rem);
+      padding: .5rem;
     }
 
     p {
-      background: white;
-      width: 100%;
-      padding: $pad;
-      font-size: 2em;
-    }
-
-    a {
-      display: inline-block; 
-      padding: $pad;
-      position: absolute;
-      background: white;
-      font-size: 2em;
-      bottom: 1em;
-      right: .5em;
-    }
-
-}
-
-  .feature-container {
-    margin-top: $pad;
-    width: 100%;
-
-    .feature {
-      height: 250px;
-    }
-
-    .feature-a {
-      background: $shade_white;
-      padding-left: $pad;
-
-      h2 {
-        font-size: 2em; 
-        font-weight: bolder;
-        //text-align: right;
-      }
-      
-      p {
-        font-size: 3em;
-        text-align: right;
-        font-weight: 100;
-      }
-
-      a {
-        display: inline;
-        background: $dye-black;
-        color: $shade-white; 
-        font-size: 1.5em;
-        padding: 0.25em;
-        float: right;
-        //padding-left: $pad;
-
-      }
+      @include font_size(2rem);
+      text-align: right;
+      display: inline;
+      background: $dye_light;
+      line-height: 3rem;
     }
     
-    .feature-b {
-      margin-top: $pad;
-      background: $dye_light * .8;
-
-      background: url('../asset/image/project/peach.png');
-      background-size: 100%;
-      background-repeat: no-repeat;
+    a {
+      margin-top: .5rem;
+      @include button;
     }
   }
 
-  .head{
-    width: 100%;
-    height: 250px;
-    background: $dye-light * .5;
-    margin-top: $pad;
-    background: url('../asset/image/landing/streach-head.png');
-    background-repeat: no-repeat;
-    background-position: center;
+  .needy-for-speedy {
+    h2, a {
+      text-align: right;
+    }
+
+    p {
+      text-align: left;
+        background: $dye_lightish;
+    }
+  }
+
+  .crucial-vim-plugins {
+    p { 
+      background: $dye_medium;
+    }
+  }
+
+  .head {
+    img {
+      width: 100%;
+    }
   }
 
   .tune {
-    position: relative;
-    padding-left: 3em;
-    padding-right: 3em;
-    //width: 200%;
-    //margin-left: -50%;
-    height: 250px;
-    background: $dye-light * .5;
-    //transform: translateX(-50%);
-    margin-top: 3em;
-    background: url('../asset/image/landing/chain.png');
+    background: url('../asset/image/landing/original/chain.png');
     background-attachment: fixed;
     background-position: center;
-    background-repeat: repeat;;
-    //background-repeat: no-repeat;
-    a {
-      position: absolute;
-      display: inline-block;
-      //width: 100%;
-      font-size: 1.5em;
-      text-align: right;
-      padding: $pad;
-      bottom: 0;
-      right: 0;
-      //padding-right: 2.55em;
+    background-repeat: repeat;
+    padding: 3rem 2rem 2rem 2rem;
+    .audio-container {
       background: $shade_white;
+      border: 2px solid $shade_black;
+      padding: 1rem ;
     }
 
-    .player-container {
-      position: absolute;
-      background: $dye_white;   
-      border: 2px solid $dye_black;
-      padding: $pad;
-      width: calc(100% - 6em); //MAGIC
-      top: 50%;
-      transform: translateY(-50%);
-      
-      h2 {
-        font-size: 1.25em;
-      }
+    a {
+      @include button;
+      display: inline-block;
+      margin-top: 2rem;
+      text-align: right;
     }
 
-    //background-size: cover;
   }
 
-  .art-container {
-    margin-top: 2.5em;
-    width: 100%;
-    .art {
-      height: 100vw;
+  .art {
+    a {
+      @include button;
+      float: right;
+      display: inline-block;
     }
 
-    .art-b, .art-c, .art-d {
-      margin-top: $pad;
-    }
-
-    .art-a {
-      background: $dye_lightish;
-    }
-
-    .art-b {
-      background: $dye_light * .8;
-    }
-
-    .art-c {
-      background: $dye_lightish * .8;
-    }
-
-    .art-d {
-      background: $dye_lightish;
+    .image-container {
+      img {
+        width: 100%;
+        margin-bottom: .5rem;
+      }
     }
   }
 }
 
 @include tablet_styles {
   .landing {
-    .bio {
-      button {
-        bottom: 1em;
-        right: 1em;
-
-      }
-    }
-    .feature-container {
-      width: 100%;
-      height: 250px;
-
-      .feature {
-        float: left;
-        width: calc(60% - .5em); // MAGIC
-        height: 250px;
-      }
-
-      .feature-b {
-        margin: 0;
-        margin-left: $pad;
-        width: 40%;
-      }
-    }
-
-    .art-container {
-      width: 100%;
-      height: 100vw;
-
-      a {
+    .blog-feature {
+      h2, a  {
         display: inline-block;
-        width: 100%;
-        font-size: 1.5em;
-        text-align: right;
-        padding: $pad;
-        padding-right: 2.55em;
       }
 
-      .art {
-        width: calc(50vw - .25em); // MAGIC
-        height: calc(50vw - .25em); // MAGIC 
-        float: left;
-        margin: 0;
+      p {
+        margin: 0 2rem;
+        padding: 0 1rem;
       }
-
-      .art-b, .art-d {
-        margin-left: $pad;
-      }
-
-      .art-c, .art-d {
-        margin-top: $pad;
+    }
+    
+    .art {
+      .image-container {
+        img {
+          width: calc(50% - .25rem);
+          &:nth-child(even){
+            margin-left: .5rem
+          }
+        }
       }
     }
   }
 }
 
 @include desktop_styles {
-  .landing {
-    .art-container {
-      height: 980px;
-      .art {
-        height: calc(980px / 2 - .25em); // MAGIC
-        width: calc(980px / 2 - .25em); // MAGIC
-        float: left;
-      } 
-    }
+  .landing { 
+    padding:3rem 0;
   }
 }

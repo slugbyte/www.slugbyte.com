@@ -2,14 +2,20 @@ import './_contact.scss'
 import React from 'react'
 import { Link } from 'gatsby'
 
+import LazyImage from '../../components/lazy-image'
 import Layout from '../../components/layout'
 
-import headShot from './head-shot.png'
+import headShot from './head-shot-500.png'
+import headShotThumb from './head-shot-50.png'
 
 const IndexPage = () => (
   <Layout >
     <div className='contact-page'>
-      <img alt='Duncan Marsh' src={headShot}/>
+      <LazyImage image={{
+        description: 'Duncan Marsh',
+        url: headShot,
+        thumbnail: headShotThumb,
+      }} />
       <div className='info'>
         <h2>Duncan Wolf Marsh</h2>
         <h3>email:</h3><p>duncan@slugbyte.com</p>

@@ -1,4 +1,4 @@
-import './layout.scss'
+import './_layout.scss'
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -33,9 +33,14 @@ const Layout = (props) => {
             <html lang="en" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           </Helmet>
-          <Header siteTitle={data.site.siteMetadata.title} />
           <div className='site-content'>
-            {children}
+            <Header />
+            <main className='site-main'>
+              {children}
+            </main>
+            <footer>
+              &copy; Duncan Marsh 2019
+            </footer>
           </div>
         </>
       )}

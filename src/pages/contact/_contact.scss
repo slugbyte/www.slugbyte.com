@@ -1,42 +1,71 @@
-@import '../../style/_var.scss';
+@import '../../style/_include.scss';
 
 .contact-page {
+  padding: 1rem;
   img {
-    width: 60%;
+    display: block;
     margin: 0 auto;
-    margin-top: $pad;
-  }
-h2 {
-}
-  h2, h3, p, a{
-    margin-left: 1em;
-  text-align: center;
+    width: 100%;
+    height: calc(100vw - 2rem);
+    margin-bottom: 1rem;
   }
 
-  h2, h3 {
-    margin-top: $pad;
+  .info {
+    h2 {
+      color: $shade_light;
+      background: $shade_black;
+      padding: .5rem;
+      @include font_size(2.5rem); 
+      text-align: right;
+    }
+    h3 {
+      text-align: right;
+      @include font_size(2rem);
+    } 
+    p, a {
+      padding: .5rem;
+      text-align: right;
+      width: 100%;
+      @include font_size(1.5rem);
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
-@media screen and (min-width: $break_tablet){
+@include tablet_styles {
   .contact-page {
-    position: relative;
-    padding-top: $pad;
+    clear: both;
+
     img {
-      width: 50%;
-      //height: 50vw;
-      //float: left;
+      width: 45vw;
+      height: calc(50vw);
+      float: left;
     }
 
     .info {
-      position: absolute;
-      left: 2em;
-      top: 80px;
-      //background: yellow;
+      width: 50vw;
       float: left;
-      h2, h3, p, a {
-        text-align: right;
-      }
+    }
+  }
+}
+
+@include desktop_styles {
+  .contact-page {
+    padding: 0;
+    padding-top: .5rem;
+    width: 100%;
+    img {
+      width: calc((980px * .5));
+      height: calc((980px * .5));
+      float: left;
+    }
+
+    .info {
+      width: calc((980px * .5));
+      float: right;
     }
   }
 }

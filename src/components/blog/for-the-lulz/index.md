@@ -1,106 +1,85 @@
-# For the lulz
-Programming has always been a plesure for me. I love to crack my kuckles and smash out ideas into my computer. It feels like a game of puzzles that reward me with questions to explore. As I tackle a new question I discover a new one. For me this game has no specific outcome, only many potential paths that could be followed. Though I enjoy programming "as a game" in it of itself sometimes my head will churn a question with little progress. In these moments I find taking breaks to be more productive than working. I find that after taking a good break I can tackle a problem with a fresh outlook, that is more productave but more importantly more enjoyable. 
+# For The Lulz
+![](https://assets.slugbyte.com/github/misc/for-the-lulz.png)   
 
-One of the key factors in this perscription to reinvigorate your coding is taking a GOOD break. When I have time I like to go for a walk, laydown and enjoy a podcast, read from a book, chatch up with far away friends, and so on an so fourth. However, Sometimes I just want to clear my head for a few minutes. Sometimes I dont event want to leave the computer. Being the TUI-geek that I am, over the years I have found countless great ways to spend time in the terminal just for the luls. Here are a few of the wonderful tools I have found that are designed just for that reason. 
+I love to crack my knuckles and smash out ideas into my computer, programming has all ways been a joy to me. It often feels like a set of puzzles that reward me with new puzzles to explore. In that way, I think of coding as a puzzle game. Like any hard game I get stuck, I sometimes find my head will churn a on a solution to a puzzle with little progress. In these moments I find taking breaks to be very productive. After taking a break I can tackle a problem with a fresh outlook that is more productive and more enjoyable. 
 
-Which is to say I think every hacker needs down time and pile of lulz tools to blow of steam during what you might tell your boss is "complie time". Dis here a list of a few o my favorite lulzi command line utilitys.
+One of the key factors of this prescription to reinvigorate my problem solving is taking *GOOD* breaks. My definition of a *GOOD* break is one that will take my mind off the troubling puzzle. When I have the time I like to go for a walk, enjoy a podcast, read a book, or catch up with faraway friends. However, sometimes I just want to clear my head for a few minutes without leaving the computer. Me being the [TUI](https://en.wikipedia.org/wiki/Text-based_user_interface)-geek that I am, I have found countless great ways to spend time in the terminal just for the lulz. The following is a list of some wonderful games and tools that I use to take **GOOD** short breaks on the computer.  
 
-## Text adventures
-I have to start with text adventures, because the way I see it text adventures were the orginal "for the lulz" programs. In the late 1970s university students wrote first text adventure games on their school mainframes. In between research projects these students were *playing* with their code, writing games. These games were shared, modified, and played by the few hackers that had the curiousity to poke about their shared mainframe computers to find these hidden gems.
+**!YEEEEE lulz to take a break from HAXHAX lul-wut-fun!**
 
-### [colossal cave adventure](http://www.catb.org/~esr/open-adventure/)
-Colossal cave adventure was written in 1975. It was part spilunking simulation of the real **Colossal Cave**, and part fantasy puzzle game. Though the game is old and has a very basic UI, I think it remains fun to play to this day. It might look simple at first glance but I found it to be extreemly dificult and rewarding. 
-### [Zork 1](https://if.illuminion.de/infocom.html)
-### [Planetfall](https://if.illuminion.de/infocom.html)
+## Games WutWut
+### Text Adventure
+In the late 1970s university students started playing with their code by writing games on their school mainframes. These games were shared, modified, and played by the few hackers that had the curiosity to poke about their computers for the lulz. Some of these early computer games took the form of what is now called *text adventure games* or *interactive fiction*.
 
-## Rouge and the likes
-### [nethack](https://nethack.org/)
-An extremly dificult turn based RPG dungen crawler. Choose from a array of charicter classes with different skills and playstyles, and begin your descent into a dangeros cave to aqute for your god of choise. Each level of the cave is randomly genorated. Don't forget to feed your pet :p
+I use the [frotz](https://gitlab.com/DavidGriffith/frotz) emulator to play the following [zmachine](https://en.wikipedia.org/wiki/Z-machine) games. *frotz* should be available on your system's package manager, ie. apt-get, pacman, brew... 
 
-### [slashem](http://www.slashem.org/)
-A varient of nethack, with new roles, races, levels, monsters, items, artifacts, and more.
+* [Colossal Cave Adventure](http://www.catb.org/~esr/open-adventure/) was written in 1975. It was part spelunking simulation of the real [Colossal Cave](https://www.google.com/maps/place/Colossal+Cave+Mountain+Park/@32.0620549,-110.6357057,17z/data=!3m1!4b1!4m5!3m4!1s0x86d668ac8da645bd:0x35a07e7864dd8bb7!8m2!3d32.0620549!4d-110.633517?hl=en) and part fantasy puzzle game. IT'S EPIC.
 
-## misc games
-### [dopewars](https://dopewars.sourceforge.io/)
-You are slinging dope to pay of some debt. Cops are allways on the look out and your shady "friends" and customers are In it for themselfs. 
+* [Zork 1](https://if.illuminion.de/infocom.html) was written in 1980. You play as a treasure hunter venturing into a dangerous ancient empire in seek of great wealth.
+* [Planetfall](https://github.com/historicalsource/planetfall/blob/master/COMPILED/planetfall.z3) was written in 1983. Planetfall is a space adventure. You are a lowly ensign on a starship. After explosions on your ship, you find your self in an escape pod which crash lands on a nearby planet.
 
-### [robotfindskitten](http://robotfindskitten.org/)
-A zen game that includes you, a robot, looking for your cat. 
+### Rouge-like
+Rouge-like games are turn-based role-play dungeon crawl games with randomly generated levels. They are highly inspired by tabletop games like Dungeons and Dragons. Rouge-likes got their name because the first of their kind was named [rouge](https://en.wikipedia.org/wiki/Rogue_(video_game)), written in 1980.
 
-### [Moon Buggy](https://www.seehuhn.de/pages/moon-buggy)
-Opperate a buggy across the moon without crashing in a crator. 
+These games should be available using your system's package manager, ie. apt-get, pacman, brew...  
 
-### [tron](http://sshtron.zachlatta.com/)
-a multiplayer tron game. 
+* [nethack](https://nethack.org/) is an extremely difficult rouge-like. Choose from an array of character classes with different skills and play-styles, and begin your descent into a dangerous cave to acquire an amulet for your god. Don't forget to feed your pet :p
 
-### [Ninvaders](http://ninvaders.sourceforge.net/)
-Pilate a fiter craft and fend of waves of descending alians with your lazer cannons.
+* [slashem](http://www.slashem.org/) is a variant of nethack, with new roles, races, levels, monsters, items, artifacts, and more.
 
-### [pacman4console](https://sites.google.com/site/doctormike/pacman.html)
-A comand line pacman.
+### Misc games
+These games should be available using your system's package manager, ie. apt-get, pacman, brew...  
 
-### [nSnake](https://github.com/alexdantas/nSnake)
-Sliter through the tall grass and eat a hearty meal. When you eat your grow and there ain't much room. Don't accidentaly eat your self, Ok?
+* [dopewars](https://dopewars.sourceforge.io/) You are slinging dope to pay off some debt. Cops are all ways on the lookout for you and your shady **BLEEP**. Get rich or die trying. 
 
-### [nettoe](http://nettoe.sourceforge.net/)
-Tic Tac Toe for the command line.
+* [robotfindskitten](http://robotfindskitten.org/) A zen game where you, a robot, are looking for your cat. 
 
-### [gnuchess](https://www.gnu.org/software/chess/)
-Chess for the command line.
+* [moon-buggy](https://www.seehuhn.de/pages/moon-buggy) Operate a buggy across the moon without crashing in a crater. 
 
-### [bastet](http://fph.altervista.org/prog/bastet.html)
-Tetris with a special algorithem to feed your the wost block possible.
+* [bastet](http://fph.altervista.org/prog/bastet.html) Brutal Tetris with a special algorithm to feed your the worst block possible. 
 
-### [nudoku](https://jubalh.github.io/nudoku/)
-Sudoko for the command line.
+* [tron](http://sshtron.zachlatta.com/) You are trapped in a computer and forced to race motorcycles to the death.
 
-### [Greed](http://www.catb.org/esr/greed/greed.html)
-Move around a gird of numbers while trying to eat as much of the screen as possible.
+* [ninvaders](http://ninvaders.sourceforge.net/) Pilot a fighter spacecraft and fend off waves of descending aliens with your laser cannons.
 
+* [pacman4console](https://sites.google.com/site/doctormike/pacman.html) You are trapped in a chamber of labyrinths and need to eat your way out, but you must avoid the ghouls running in the corridors. 
 
-## ASCII ART
-### sl 
-A great reminder that you need to slow down. sl stands for steam locomotive, and because it is the reverse of `ls` you might find a train chugging acrouns your terminal when working a but to quickly.
+* [nsnake](https://github.com/alexdantas/nSnake) You, a snake, must slither through the tall grass in search of a hearty meal. When you eat you grow and there ain't much room. Don't accidentally eat your self, Ok?
 
-### toilet 
-print complex ascii bubble letters.
+* [greed](http://www.catb.org/esr/greed/greed.html) Move around a grid of piles of money while trying to collect as much of the dough as possible.
 
-### figlet 
-print complex ascii bubble letters.
+* [nettoe](http://nettoe.sourceforge.net/) is tic tac toe for the command line.
 
-### cowsay 
-make a cow say anything, or a dragon, or milk, and more.
+* [gnuchess](https://www.gnu.org/software/chess/) is chess for the command line.
 
-### cowthink
-make a cow think anythion, or a dragon, or milk, and more.
+* [nudoku](https://jubalh.github.io/nudoku/) is sudoku for the command line.
 
-### boxes 
-A tool for drawing boxes around your text (like an advanced cowsay)
+## Tools Yo
+These tools should be available using your system's package manager, ie. apt-get, pacman, brew...  
+### ASCII ART
+* [sl](http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/index_e.html) is a great reminder that you need to slow down. sl stands for steam locomotive. Running sl will trigger an ASCII train animation to chug across your terminal. Because `sl` is `ls` backward you might find the train appearing more often than you expect.
 
-### aafire
-An ascii camp fire simulator.
+* [figlet](http://www.figlet.org/) prints complex ascii bubble letters.
 
-### asciiview 
-a tool to view images as ascii. 
+* [toilet](https://github.com/cacalabs/toilet) also prints complex ascii bubble letters.
 
-### cmatrix
-A visulizion of falling green ascii, that resembles The Matrix. 
+* [cowsay](https://web.archive.org/web/20071026043648/http://www.nog.net/~tony/warez/cowsay.shtml) an ASCII cow, or dragon, or milk, and more, that will say anything you want.
 
-### `telnet towel.blinkenlights.nl`
-Watch and ascii implementaion of startwars.
+* [cowthink](https://web.archive.org/web/20120225123719/http://www.nog.net/~tony/warez/cowsay.shtml) an ASCII cow, or dragon, or milk, and more, that will think anything you want.
 
-### rig 
-print a randomly genarated fake identitiy 
+* [boxes](https://boxes.thomasjensen.com/) is a tool for drawing ASCII boxes around your text.
 
-### fortune 
-prints a unique fortune each time you run it
+* [aafire](http://aa-project.sourceforge.net/) is an ascii camp fire simulator.
 
-## MISC
-### espeak 
-Make your computer talk like a robot.
+* [aview](http://aa-project.sourceforge.net/aview/) is a tool to view images as ASCII. 
 
-### fuck 
-Just a funny command that tryes to automatic fix your last command and run it
+* [cmatrix](https://www.asty.org/cmatrix/) is a visualization of falling green ASCII, that resembles The Matrix. 
 
-### rev 
-reverse a string
+* Run `telnet towel.blinkenlights.nl` to watch an ASCII implementation of Star Wars.
+
+## Misc Tools
+* [espeak](http://espeak.sourceforge.net/) makes your computer talk like a robot.
+
+* [rig](https://github.com/EinBaum/rig) will print a randomly generated fake identity. 
+
+* [fortune](https://www.shlomifish.org/open-source/projects/fortune-mod/) prints a unique fortune each time you run it.

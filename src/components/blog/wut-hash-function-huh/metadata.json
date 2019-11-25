@@ -1,7 +1,7 @@
 {
   "url": "/blog/wut-hash-function-huh",
   "title": "Wut, Hash Functions, Huh?",
-  "description": "An interactive breakdown of how to understnd and write hashing functions.",
+  "description": "An interactive tutorial on how to write hashing functions.",
   "keywords": [ 
     "programming", "hash-function", "hash", "function", "interactive"
 	],

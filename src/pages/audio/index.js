@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 
 import Layout from '../../components/layout'
 import AudioPlayer from '../../components/audio-player'
-import squigles from './U.png'
+import squigles from './U-250.png'
 
 const IndexPage = ({data}) => {
   let tunes = data.allFile.edges.map(e => e.node)
