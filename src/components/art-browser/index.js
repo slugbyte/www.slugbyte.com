@@ -3,10 +3,11 @@ import './_art-browser.scss'
 import {smartClass} from '../../lib/util.js'
 import React from 'react'
 import LazyImage from '../lazy-image'
+import artListData from './art-list.js'
 
 let count = 0 
 let isRight = false
-const artList = require('./art-list.js').default
+const artList = artListData
   .sort(() => Math.random() > 0.5 ? -1 : 1)
   .map((e, i) => {
   if(!!(count % 9 == 0)) {

@@ -5,11 +5,10 @@ import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
-const postData = require('../../components/blog/blog-posts.js')
-
-console.log({postData})
+import postData from '../../components/blog/blog-posts.js'
 
 import metadata from './metadata.js'
+
 const BlogPostItem = ({post}) => {
   let {metadata} = post
   post.image.description = metadata.description

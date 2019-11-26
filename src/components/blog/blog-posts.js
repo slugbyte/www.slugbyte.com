@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = require('./create-post-pages.js').map(post => {
+const blogPosts = require('./create-post-pages.js').map(post => {
   return {
     metadata: require(`${__dirname}${post.dir}/metadata.js`).default,
     image: {
@@ -10,3 +10,4 @@ module.exports = require('./create-post-pages.js').map(post => {
   }
 })
 
+export default blogPosts

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
-const postData =  require('./blog-posts.js')
+import postData from './blog-posts.js'
 
 const BlogNav = ({metadata}) => {
   let currentPostIndex = postData.reduce((r, post, i) => {
