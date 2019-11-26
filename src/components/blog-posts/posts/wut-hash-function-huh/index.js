@@ -2,9 +2,9 @@ import './_wut-hash-function-huh.scss'
 import React from 'react'
 
 import {Link} from 'gatsby'
-import Layout from '../../layout'
-import Observable from '../../observable'
-import BlogNav from '../blog-nav.js'
+import Layout from '../../../layout'
+import Observable from '../../../observable'
+import BlogNav from '../../../blog-nav'
 
 import oContent from './observable-function.js'
 import metadata from './metadata.js'

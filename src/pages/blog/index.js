@@ -5,8 +5,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
-import postData from '../../components/blog/blog-posts.js'
 
+import allPostMetadata from '../../components/blog-posts/all-post-metadata.js'
 import metadata from '../../metadata/blog-metadata.js'
 
 const BlogPostItem = ({post}) => {
@@ -26,7 +26,7 @@ const IndexPage = () => (
   <Layout metadata={metadata}>
     <div className='blog-page'>
       <div className='blog-container clearfix'>
-        {postData.map((post, i) => <BlogPostItem key={i} post={post} /> ) }
+        {allPostMetadata.map((post, i) => <BlogPostItem key={i} post={post} /> ) }
       </div>
     </div>
   </Layout>

@@ -1,4 +1,4 @@
-import socialImageURL from '../../../lib/social-image-url.js' 
+import socialImageURL from '../../../../lib/social-image-url.js' 
 
 export default {
   url: "/blog/for-the-lulz",
