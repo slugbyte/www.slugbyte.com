@@ -34,7 +34,7 @@ const Layout = (props) => {
             <meta name='twitter:description' content={ metadata.description }/>
             <meta name='twitter:image' content={ metadata.image || require('../blog/needy-for-speedy/cover-image.png')}/>
             <meta name='twitter:url' content={ metadata.url }/>
-            <meta name='twitter:card' content={ metadata.card  || 'slugbyte_card'}/> 
+            <meta name='twitter:card' content={ 'summary_large_image'}/> 
             <meta property='og:title' content={ metadata.title }/>
             <meta property='og:description' content={ metadata.description }/>
             <meta property='og:image' content={ metadata.image || require('../blog/needy-for-speedy/cover-image.png')}/>

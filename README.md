@@ -3,6 +3,7 @@
 
 ![](https://assets.slugbyte.com/github/misc/www-slugbyte-com-02.png)
 
-* TODO: add social media metadata
-* TODO: update each page's metadata
 * TODO: make custom url for art/IMAGE
+* TODO: make twitter cards
+* TODO: convert create-metadata to a creater/editor 
+* TODO: Add custom images to metadata
