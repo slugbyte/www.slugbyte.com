@@ -5,13 +5,14 @@ import { Link } from 'gatsby'
 
 import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
-const postData = require('../../components/blog/create-blog-post-data.js')()
+const postData = require('../../components/blog/blog-posts.js')
 
-import metadata from './metadata.json'
+console.log({postData})
 
+import metadata from './metadata.js'
 const BlogPostItem = ({post}) => {
-  let {metadata, thumbnail, imageURL} = post
-  console.log('thumbnail', thumbnail)
+  let {metadata} = post
+  post.image.description = metadata.description
   return (
     <div className='blog-post-item'>
       <LazyImage image={post.image} />

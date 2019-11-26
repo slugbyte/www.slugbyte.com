@@ -7,8 +7,7 @@ import Layout from '../../components/layout'
 
 import headShot from './head-shot-500.png'
 import headShotThumb from './head-shot-50.png'
-
-const metadata = require('./metadata.json')
+import metadata from './metadata.js'
 
 const IndexPage = () => (
   <Layout metadata={metadata}>

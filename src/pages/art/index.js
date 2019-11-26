@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from '../../components/layout'
 import ArtBrowser from '../../components/art-browser'
 
-const metadata = require('./metadata.json')
+import metadata from './metadata.js'
 
 const IndexPage = () => {
   return (

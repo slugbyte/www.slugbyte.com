@@ -4,10 +4,11 @@ require('dotenv').load()
 
 exports.createPages = ({actions}) => {
   const {createPage} = actions
-  const postData = require('./src/components/blog/create-blog-post-data.js')({buildMode: true})
+  const postData = require('./src/components/blog/create-post-pages.js')
+  console.log('postData', postData)
   postData.forEach(post => {
     createPage({
-      path: post.metadata.url,
+      path: post.path,
       component: post.component,
     })
   })

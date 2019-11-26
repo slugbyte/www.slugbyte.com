@@ -6,9 +6,10 @@ import Layout from '../components/layout'
 import LazyImage from '../components/lazy-image'
 import AudioPlayer from '../components/audio-player'
 
-const metadata = require('./metadata.json')
+import metadata from './metadata.js'
 
 const featuredTuneURI = require('../asset/tune/Untitled-06.wav')
+
 let head = {
   description: 'Stetch head',
   url: require('../asset/image/landing/1000/streach-head-1000.png'),

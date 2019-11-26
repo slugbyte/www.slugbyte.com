@@ -9,7 +9,7 @@ import Layout from '../../components/layout'
 import AudioPlayer from '../../components/audio-player'
 import squigles from './U-250.png'
 
-import metadata from './metadata.json'
+import metadata from './metadata.js'
 
 const IndexPage = ({data}) => {
   let tunes = data.allFile.edges.map(e => e.node)

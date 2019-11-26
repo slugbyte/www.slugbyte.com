@@ -7,7 +7,7 @@ import Observable from '../../observable'
 import BlogNav from '../blog-nav.js'
 
 import oContent from './observable-function.js'
-import metadata from './metadata.json'
+import metadata from './metadata.js'
 
 let expose = {
   stringTo32BitBlocks: `
