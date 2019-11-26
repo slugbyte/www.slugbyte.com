@@ -1,4 +1,4 @@
-import socialImageURL from '../../lib/social-image-url.js' 
+import socialImageURL from '../lib/social-image-url.js' 
 
 export default {
   title: "Blog",
@@ -6,8 +6,8 @@ export default {
   description: "Slugbyte's blog about art, audio, and programming",
   published: true,
   timestamp: "2019-11-16T17:46:32.828Z",
-  twitterCard: socialImageURL(require('../../asset/image/card/twitter/blog-card-twitter.png')),
-  facebookCard: socialImageURL(require('../../asset/image/card/facebook/blog-card-facebook.png')),
+  twitterCard: socialImageURL(require('../asset/image/card/twitter/blog-card-twitter.png')),
+  facebookCard: socialImageURL(require('../asset/image/card/facebook/blog-card-facebook.png')),
   keywords: [
     "blog",
     "programming",

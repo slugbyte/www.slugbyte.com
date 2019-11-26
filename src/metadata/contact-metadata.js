@@ -1,4 +1,4 @@
-import socialImageURL from '../../lib/social-image-url.js' 
+import socialImageURL from '../lib/social-image-url.js' 
 
 export default {
   title: "Contact",
@@ -6,8 +6,8 @@ export default {
   description: "Slugbyte's contact information.",
   published: true,
   timestamp: "2019-11-25T15:32:20.476Z",
-  twitterCard: socialImageURL(require('../../asset/image/card/twitter/contact-card-twitter.png')), 
-  facebookCard: socialImageURL(require('../../asset/image/card/facebook/contact-card-facebook.png')),
+  twitterCard: socialImageURL(require('../asset/image/card/twitter/contact-card-twitter.png')), 
+  facebookCard: socialImageURL(require('../asset/image/card/facebook/contact-card-facebook.png')),
   keywords: [
     "contact",
     "email",

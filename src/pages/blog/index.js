@@ -7,7 +7,7 @@ import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
 import postData from '../../components/blog/blog-posts.js'
 
-import metadata from './metadata.js'
+import metadata from '../../metadata/blog-metadata.js'
 
 const BlogPostItem = ({post}) => {
   let {metadata} = post

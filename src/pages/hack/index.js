@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 import LazyImage from '../../components/lazy-image'
 
-import metadata from './metadata.js'
+import metadata from '../../metadata/hack-metadata.js'
 
 let projects = [
   {

@@ -7,7 +7,7 @@ import Layout from '../../components/layout'
 
 import headShot from './head-shot-500.png'
 import headShotThumb from './head-shot-50.png'
-import metadata from './metadata.js'
+import metadata from '../../metadata/contact-metadata.js'
 
 const IndexPage = () => (
   <Layout metadata={metadata}>
