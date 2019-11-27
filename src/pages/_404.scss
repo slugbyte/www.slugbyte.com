@@ -1,0 +1,37 @@
+@import '../style/_include.scss';
+
+.four-oh-four {
+  padding-top: 2rem;
+  h1, h2 {
+    display: block;
+    width: 100%;
+  }
+
+  h1 {
+    @include font_size(2rem);
+    text-align: center;
+  }
+
+  h2 {
+    @include font_size(1.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+
+  }
+
+  img {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+@include desktop_styles {
+  .four-oh-four {
+    img {
+      display: block;
+      width: 70%;
+      height: calc(980px * .7);
+      margin: 0 auto;
+    }
+  }
+}
