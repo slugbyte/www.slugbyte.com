@@ -13,7 +13,7 @@ upload:
 nuke: 
 	aws s3 rm s3://www.slugbyte.com --recursive 
 
-reset: build nuke upload
+reset: build nuke upload logdate
 
 publish: build upload logdate
 
